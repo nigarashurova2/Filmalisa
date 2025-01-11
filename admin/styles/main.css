@@ -11,7 +11,7 @@ body {
 }
 
 
-/* SIDEBAR */
+/* SIDEBAR  START*/
 .sidebar {
   width: 250px;
   background: #1E1E1E;
@@ -118,6 +118,81 @@ body {
   transform: translateX(5px);
 }
 
+/* SIDEBAR  END*/
+
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-text h3 {
+  font-size: 13px;
+  margin: 3px 0;
+  font-weight: 500;
+  color: #cccc;
+}
+
+.header-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-profile .admin-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.admin-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.admin-profile:hover img {
+  border-color: #652F8D;
+  transform: scale(1.05);
+}
+
+
+
+/* HEADER RIGHT */
+.header-right{
+  display: flex;
+  align-items: center;
+}
+.create-btn-content{
+  margin-right: 20px;
+}
+.create-btn-content button{
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: #9B51E0;
+  color: white;
+  font-style: 500;
+  font-size: 14px;
+}
+/* HEADER RIGHT */
+
+
+/* HEADER END */
+
 @media (max-width: 768px) {
   .sidebar {
     width: 70px;
@@ -179,6 +254,265 @@ body {
 }
 
 
+button{
+  cursor: pointer;
+}
+
+
+
+/* TABLE  DESIGN START*/
+
+.table-container{
+  padding-top: 30px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.table {
+  border-collapse:collapse; 
+  border-spacing: 0; 
+  width: 100%;
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+.table thead{
+  background: #1E1E1E;
+  color: white;
+}
+.table tbody{
+  background: white;
+}
+.table th, 
+.table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.table tr:first-child th:first-child {
+  border-top-left-radius: 10px; 
+}
+
+.table tr:first-child th:last-child {
+  border-top-right-radius: 10px; 
+}
+
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px; 
+}
+
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px; 
+}
+
+.table .edit-btn,  .table .delete-btn{
+  padding: 7px;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.table .delete-btn{
+  color: white;
+  background-color: red;
+}
+.table .edit-btn{
+  color: white;
+  background-color: #1abc9c;
+}
+/* TABLE  DESIGN END*/
+
+
+
+
+
+/* MODAL DESIGN */
+.modal {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #171616;
+  margin: 5% auto; 
+  border: 1px solid #171616;
+  border-radius: 15px;
+  width: 50%;
+}
+.modal-sm{
+  width: 35%;
+}
+.modal-md{
+  width: 55%;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-header{
+  text-align: center;
+  padding: 15px 25px;
+}
+.modal .modal-title{
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+}
+.modal-body{
+  padding: 25px;
+  text-align: left;
+}
+.modal-body p.modal-text{
+  color: white;
+  font-weight: 500;
+}
+
+.modal-footer{
+  padding: 20px;
+  border-top: 1px solid rgb(39, 38, 38);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.modal-footer button{
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 14px;
+  color: white;
+}
+.modal-close-btn{
+  background-color: rgb(46, 44, 44);
+}
+
+/* Modal ADD Form */
+
+
+.mainForm {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.mainForm  .form-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainForm  .form-left label {
+  font-size: 14px;
+  color: #323B54;
+}
+
+.form-left input,
+.form-left textarea,
+.form-left select {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #323B54;
+  color: #323B54;
+  font-size: 14px;
+  background-color: transparent;
+  gap: 16px;
+}
+
+.form-left textarea{
+  min-height: 100px;
+  resize: none;
+}
+
+.form-left input::placeholder,
+.form-left textarea::placeholder,
+.form-left textarea {
+  color: #323B54;
+}
+
+.mainForm  .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainForm .submit-btn{
+  padding: 10px 24px;
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mainForm  .form-left button:hover {
+  background-color: #5a4bcf;
+}
+
+.mainForm  .form-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainForm  .form-right img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.mainForm .form-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* MODAL DESIGN */
+
+
+
+
+/* BUTTONS DESIGN */
+.danger-btn{
+  background-color: red;
+}
+.success-btn{
+  background-color: #1abc9c;
+}
+/* BUTTON DESIGN */
+
+
+
 /* MAIN CONTENT */
 
 .content {
@@ -204,6 +538,18 @@ body {
   @media (max-width: 576px) {
     .content {
         padding: 15px;
+      }
+
+      .header-text h1 {
+        font-size: 16px;
+      }
+      
+      .header-text h2 {
+        font-size: 20px;
+      }
+      
+      .admin-profile .admin-name {
+        display: none;
       }
   }
   

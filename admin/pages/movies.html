@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/movies.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="movies">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../assets/images/filmalisa_logo.png" alt="filmalisa">
+          <h2>filmalisa</h2>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html">
+                <i class='bx bxs-dashboard'></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class='bx bxs-movie-play'></i>
+                <span>Movies</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-category'></i>
+                <span>Categories</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-user'></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-comment'></i>
+                <span>Comments</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-contact'></i>
+                <span>Contact us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout">
+          <a href="#">
+            <i class='bx bxs-log-out'></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+
+      <main class="content">
+        <header>
+          <div class="header-text">
+            <h3>Hi Admin</h3>
+            <h2>Movies</h2>
+          </div>
+         
+          <div class="header-right">
+            <div class="create-btn-content">
+                <button class="create-btn">Create</button>
+            </div>
+            <div class="admin-profile">
+                <img src="../assets/images/admin-logo.png" alt="Admin">
+                <span class="admin-name">Admin</span>
+              </div>
+          </div>
+        </header>
+
+        <div class="table-container">
+            <table class="table rounded-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Overview</th>
+                        <th>Category</th>
+                        <th>IMDB</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Title 1</td>
+                        <td>Lorem</td>
+                        <td>Category 1</td>
+                        <td>12.6</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Title 2</td>
+                        <td>Lorem</td>
+                        <td>Category 1</td>
+                        <td>12.6</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Title 3</td>
+                        <td>Lorem</td>
+                        <td>Category 1</td>
+                        <td>12.6</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Title 3</td>
+                        <td>Lorem</td>
+                        <td>Category 1</td>
+                        <td>12.6</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+      </main>
+    </div>
+
+
+
+
+
+
+ 
+    <!-- MODALS -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content modal-sm">
+          <div class="modal-header">
+            <p class="modal-title">Məlumatın silinməsi</p>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Siz bu məlumatı həqiqətən silmək istəyirsiniz?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-close-btn del-modal-close">İmtina</button>
+            <button type="button" class="danger-btn remove-movie">Sil</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="createModal" class="modal">
+        <div class="modal-content modal-md">
+            <div class="modal-body">
+                    <form class="mainForm" id="createMovieForm">
+                      <div class="form-left">
+                        <input type="text" id="title" name="title" placeholder="Title">
+                
+                        <textarea id="overview" name="overview" placeholder="Overview"></textarea>
+                
+                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
+                
+                        <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
+                
+                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
+                
+                        <input type="text" id="imdb" name="imdb" placeholder="IMDB">
+                
+                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
+                
+                        <select id="category" name="category">
+                          <option value="action">Category</option>
+                          <option value="drama">Drama</option>
+                          <option value="sci-fi">Sci-Fi</option>
+                        </select>
+                
+                       <div class="form-footer">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="adult" name="adult">
+                            <label for="adult">Adult</label>
+                          </div>
+                  
+                          <button type="submit" class="submit-btn">Submit</button>
+                       </div>
+                      </div>
+                      <div class="form-right">
+                        <img src="https://s3-alpha-sig.figma.com/img/712a/01ff/1934ab4d59fb658ae9e9619a2f283725?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hxBXy0iQL9oKEQxgclgwcT1t9RbWo6SofWETgTJoaSo76spomyuge~kPpGg4G6BafyWhL7l-XLfINL-HBjWJtTedcThatacsL1BCz5b6uT-f0eBOwb-HeS4OPo-ZhVt94rJo0pB1~F-wPZHG~hYlbHNxGg6yrNRgrN035iwWb7MRilZHS1ewtzUCgIm-WBjVMhCFd~qOy17g0rRrKOUKQznf--3TpaxFb1ii755kAmYtpJYFv~Gu3r5FG1P9i~WuDYGB06DPa1I6IJeC2MdctOu81tQwypmlFnP9iaZD3pRMRKH-M8L5VBv2YEpPC~a9RetUIE~JA87-s5CVTGp3qA__" alt="Movie Poster">
+                      </div>
+                    </form>
+            </div>
+          
+          </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content modal-md">
+        
+            <div class="modal-body">
+                    <form class="mainForm" id="editMovieForm">
+                      <div class="form-left">
+                        <input type="text" id="title" name="title" placeholder="Title">
+                
+                        <textarea id="overview" name="overview" placeholder="Overview"></textarea>
+                
+                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
+                
+                        <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
+                
+                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
+                
+                        <input type="text" id="imdb" name="imdb" placeholder="IMDB">
+                
+                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
+                
+                        <select id="category" name="category">
+                          <option value="action">Category</option>
+                          <option value="drama">Drama</option>
+                          <option value="sci-fi">Sci-Fi</option>
+                        </select>
+                
+                       <div class="form-footer">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="adult" name="adult">
+                            <label for="adult">Adult</label>
+                          </div>
+                  
+                          <button type="submit" class="submit-btn">Submit</button>
+                       </div>
+                      </div>
+                      <div class="form-right">
+                        <img src="https://s3-alpha-sig.figma.com/img/712a/01ff/1934ab4d59fb658ae9e9619a2f283725?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hxBXy0iQL9oKEQxgclgwcT1t9RbWo6SofWETgTJoaSo76spomyuge~kPpGg4G6BafyWhL7l-XLfINL-HBjWJtTedcThatacsL1BCz5b6uT-f0eBOwb-HeS4OPo-ZhVt94rJo0pB1~F-wPZHG~hYlbHNxGg6yrNRgrN035iwWb7MRilZHS1ewtzUCgIm-WBjVMhCFd~qOy17g0rRrKOUKQznf--3TpaxFb1ii755kAmYtpJYFv~Gu3r5FG1P9i~WuDYGB06DPa1I6IJeC2MdctOu81tQwypmlFnP9iaZD3pRMRKH-M8L5VBv2YEpPC~a9RetUIE~JA87-s5CVTGp3qA__" alt="Movie Poster">
+                      </div>
+                    </form>
+            </div>
+          
+          </div>
+    </div>
+    <!-- MODALS  -->
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
+
+</html>
