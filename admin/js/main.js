@@ -14,11 +14,11 @@ deleteBtn.addEventListener("click", function (event) {
     deleteModal.classList.add("show")
 })
 
-createBtn.addEventListener("click", function (event) {
+if(createBtn) createBtn.addEventListener("click", function (event) {
     createModal.classList.add("show")
 })
 
-editBtn.addEventListener("click", function (event) {
+if(editBtn) editBtn.addEventListener("click", function (event) {
     editModal.classList.add("show")
 })
 

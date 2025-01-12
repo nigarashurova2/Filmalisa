@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movies</title>
+    <title>Users</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/movies.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -24,8 +24,8 @@
                 <span>Dashboard</span>
               </a>
             </li>
-            <li class="active">
-              <a href="#">
+            <li>
+              <a href="./movies.html">
                 <i class='bx bxs-movie-play'></i>
                 <span>Movies</span>
               </a>
@@ -36,8 +36,8 @@
                 <span>Categories</span>
               </a>
             </li>
-            <li>
-              <a href="./users.html">
+            <li class="active">
+              <a href="">
                 <i class='bx bxs-user'></i>
                 <span>Users</span>
               </a>
@@ -55,11 +55,11 @@
               </a>
             </li>
             <li>
-              <a href="./actors.html">
-                <i class='bx bxs-user'></i>
-                <span>Actors</span>
-              </a>
-          </li>
+                <a href="./actors.html">
+                    <i class='bx bxs-user'></i>
+                    <span>Actors</span>
+                </a>
+            </li>
           </ul>
         </nav>
         <div class="logout">
@@ -74,13 +74,11 @@
         <header>
           <div class="header-text">
             <h3>Hi Admin</h3>
-            <h2>Movies</h2>
+            <h2>Users</h2>
           </div>
          
           <div class="header-right">
-            <div class="create-btn-content">
-                <button class="create-btn">Create</button>
-            </div>
+           
             <div class="admin-profile">
                 <img src="../assets/images/admin-logo.png" alt="Admin">
                 <span class="admin-name">Admin</span>
@@ -93,57 +91,40 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Overview</th>
-                        <th>Category</th>
-                        <th>IMDB</th>
-                        <th></th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Username</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Title 1</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
+                        <td>Ngar</td>
+                        <td>Ashurova</td>
+                        <td>Nigar</td>
+                        <td>nigar@gmail.com</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Title 2</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
+                        <td>Ngar</td>
+                        <td>Ashurova</td>
+                        <td>Nigar</td>
+                        <td>nigar@gmail.com</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
+                        <td>Ngar</td>
+                        <td>Ashurova</td>
+                        <td>Nigar</td>
+                        <td>nigar@gmail.com</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
+                        <td>Ngar</td>
+                        <td>Ashurova</td>
+                        <td>Nigar</td>
+                        <td>nigar@gmail.com</td>
                     </tr>
                 </tbody>
             </table>
@@ -155,10 +136,6 @@
 
 
 
-
-
-
- 
     <!-- MODALS -->
     <div id="deleteModal" class="modal">
         <div class="modal-content modal-sm">
