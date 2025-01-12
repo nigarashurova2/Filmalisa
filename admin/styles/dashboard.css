@@ -1,0 +1,142 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #1A1A1A;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-text h3 {
+  font-size: 13px;
+  margin: 3px 0;
+  font-weight: 500;
+  color: #cccc;
+}
+
+.header-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 15px;
+}
+
+.stat-card {
+  background: #2D2D2D;
+  border-radius: 15px;
+  padding: 15px 20px;
+  height: 160px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.stat-card.purple {
+  color: #fff;
+  background: #652F8D;
+}
+
+.stat-card h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #D7D7D7;
+  margin-top: 0;
+}
+
+.stat-card .number {
+    color: #fff;
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: #652F8D;
+  }
+  
+  .stat-card.purple:hover {
+    background: #7d6fe4;
+    border-color: #8f83e9;
+  }
+  
+  .stat-card:hover h3 {
+    color: #fff;
+  }
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-profile .admin-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.admin-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.admin-profile:hover img {
+  border-color: #652F8D;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1400px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-text h1 {
+    font-size: 16px;
+  }
+  
+  .header-text h2 {
+    font-size: 20px;
+  }
+  
+  .admin-profile .admin-name {
+    display: none;
+  }
+}
+
