@@ -1,0 +1,11 @@
+.categories {
+    display: flex;
+    min-height: 100vh;
+    background: #1A1A1A;
+    position: relative;
+  }
+
+
+.w-30 {
+  width: 30%;
+ }
