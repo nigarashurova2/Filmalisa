@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/categories.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="categories">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../assets/images/filmalisa_logo.png" alt="filmalisa">
+          <h2>filmalisa</h2>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html">
+                <i class='bx bxs-dashboard'></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="./movies.html">
+                <i class='bx bxs-movie-play'></i>
+                <span>Movies</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class='bx bxs-category'></i>
+                <span>Categories</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-user'></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="./comments.html">
+                <i class='bx bxs-comment'></i>
+                <span>Comments</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bxs-contact'></i>
+                <span>Contact us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logout">
+          <a href="#">
+            <i class='bx bxs-log-out'></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+
+      <main class="content">
+        <header>
+          <div class="header-text">
+            <h3>Hi Admin</h3>
+            <h2>Movies</h2>
+          </div>
+         
+          <div class="header-right">
+            <div class="create-btn-content">
+                <button class="create-btn">Create</button>
+            </div>
+            <div class="admin-profile">
+                <img src="../assets/images/admin-logo.png" alt="Admin">
+                <span class="admin-name">Admin</span>
+              </div>
+          </div>
+        </header>
+
+        <div class="table-container w-30">
+            <table class="table rounded-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Action</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Action</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Action</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Action</td>
+                        <td> 
+                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
+                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+      </main>
+    </div>
+
+
+
+
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content modal-md">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="mainForm" id="editCategoryForm">
+                    <div class="form-left">
+                      <input type="text" id="categoryName" name="categoryName" placeholder="category name">
+                      <div class="form-footer">
+                            <button type="submit" class="submit-btn full-width">Submit</button>
+                         </div>
+                  </form>
+            </div>
+          
+          </div>
+    </div>
+</div>
+ 
+    <!-- MODALS -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content modal-sm">
+          <div class="modal-header">
+            <p class="modal-title">Məlumatın silinməsi</p>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Siz bu məlumatı həqiqətən silmək istəyirsiniz?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-close-btn del-modal-close">İmtina</button>
+            <button type="button" class="danger-btn remove-movie">Sil</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="createModal" class="modal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <span class="close" id="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                    <form class="mainForm" id="createCategoryForm">
+                      <div class="form-left">
+                        <input type="text" id="categoryName" name="categoryName" placeholder="category name">
+                        <div class="form-footer">
+                              <button type="submit" class="submit-btn full-width">Submit</button>
+                           </div>
+                    </form>
+            </div>
+          
+          </div>
+    </div>
+
+    <!-- MODALS  -->
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
+
+</html>
