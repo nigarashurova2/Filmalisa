@@ -1,0 +1,73 @@
+ .swiper {
+    width: 100%;
+  }
+  .home-carousel .swiper {
+    width: 100%;
+    height:680px;
+  }
+  .swiper-slide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.slide-content{
+  width: 100%;
+
+}
+
+section.main .header{
+  padding: 40px 0 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 35px;
+}
+
+section.main .header h1{
+  font-size: 35px;
+  margin-right: 15px;
+}
+section.main .header span{
+  position: relative;
+  top: 5px;
+}
+
+.action-carousel .swiper{
+  max-height: 450px;
+}
+
+.comedy-carousel .swiper{
+  height: 650px;
+  width: 100%;
+}
+
+.slide-content img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+.main .swiper-slide::after{
+  background-color: rgb(37, 37, 37);
+  opacity: 0.4;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+section.comedy{
+  padding-bottom: 50px;
+}
+
+@media (max-width: 576px) {
+    .home-carousel .swiper {
+      width: 100%;
+      max-height:680px !important;
+      height: 100%;
+    }
+}
