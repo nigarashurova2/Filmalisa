@@ -1,0 +1,149 @@
+body {
+  background-color: #1d1d1d;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.client-section {
+  display: flex;
+}
+
+.input-block {
+  width: 35px;
+  background-color: #1f1f1f;
+}
+.about-input {
+  width: 100%;
+  text-align: center;
+}
+.about-input span {
+  font-family: numans;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 80px;
+  color: #c3c8d4;
+}
+
+.about-input img {
+  margin-top: 93px;
+  margin-bottom: 23px;
+}
+.input-title {
+  font-family: numans;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 80px;
+  color: #c3c8d4;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.login-section {
+  width: 618px;
+  height: 472px;
+  background-color: #5c5959;
+}
+
+.aside-section {
+  width: 56px;
+  margin-left: 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  box-shadow: 0 3px 10px rgba(34, 33, 33, 0.5);
+}
+
+.aside-icon {
+  margin-top: 40px;
+  margin-bottom: 64px;
+}
+.icon {
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+
+.input-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.username-block {
+  position: relative;
+  width: 547px;
+  height: 64px;
+  background-color: #0000;
+  border-radius: 12px;
+  border: 1px solid #323b54;
+}
+.message-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -71px;
+  left: 16px;
+  cursor: pointer;
+}
+.username {
+  width: 475px;
+  height: 40px;
+  position: absolute;
+  background-color: #1a1a1a;
+  border: 0;
+  right: 16px;
+  top: 12px;
+}
+.password-section {
+  position: relative;
+  width: 547px;
+  height: 64px;
+  background-color: #0000;
+  border-radius: 12px;
+  border: 1px solid #323b54;
+}
+
+.password {
+  width: 435px;
+  height: 40px;
+  position: absolute;
+  top: 12px;
+  left: 56px;
+  background-color: #1a1a1a;
+  border: 0;
+}
+.key-icon {
+  position: absolute;
+  left: 16px;
+  top: -72px;
+  cursor: pointer;
+}
+.eye-icon {
+  position: absolute;
+  right: 16px;
+  top: -72px;
+  cursor: pointer;
+}
+.link {
+  position: absolute;
+}
+.register-link {
+  position: relative;
+  top: 160px;
+  right: 230px;
+  font-size: 14px;
+  color: #99a3be;
+}
+.btn {
+  width: 547px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #9b51e0;
+  margin-top: 40px;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
