@@ -1,7 +1,6 @@
 const home_swiper = new Swiper('.home-carousel .swiper', {
   loop: true,
-//   spaceBetween: 30,
-//   centeredSlides: true,
+  centeredSlides: true,
   autoplay: {
     delay: 3500,
     disableOnInteraction: false,
@@ -88,3 +87,4 @@ const comedy_swiper = new Swiper('.comedy-carousel .swiper', {
       }
     }
   });
+
