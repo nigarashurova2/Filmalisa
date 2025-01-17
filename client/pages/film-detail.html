@@ -45,19 +45,23 @@
                 <div class="info-container">
                     <div class="title-row">
                         <h2>have you seen our robot?</h2>
-                        <span class="watch-text">Watch Live</span>
+                        <div class="watch-link">
+                            <span>Watch Link</span>
+                        </div>
+                        <button class="add-btn">+</button>
                     </div>
 
                     <p class="description">
-                        The mission to save Scarecrow takes an unexpected turn, throwing the Resolute into chaos. Judy hatches a plan to get a ship to Alpha Centauri.                    </p>
+                        The mission to save Scarecrow takes an unexpected turn, throwing the Resolute into chaos. Judy hatches a plan to get a ship to Alpha Centauri.
+                    </p>
 
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <span>8.1</span>
                     </div>
 
-                    <div class="meta-info">
-                        <div class="info-row">
+                    <div class="info-section">
+                        <div class="info-grid">
                             <div class="info-item">
                                 <span class="label">Type</span>
                                 <span class="value">TV Show</span>
@@ -66,8 +70,6 @@
                                 <span class="label">Status</span>
                                 <span class="value">Returning Series</span>
                             </div>
-                        </div>
-                        <div class="info-row">
                             <div class="info-item">
                                 <span class="label">First air date</span>
                                 <span class="value">2018-04-13</span>
@@ -76,18 +78,34 @@
                                 <span class="label">Last air date</span>
                                 <span class="value">2019-04-24</span>
                             </div>
+                            <div class="info-item">
+                                <span class="label">No. of episodes</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Episode run time</span>
+                                <span class="value">56 min</span>
+                            </div>
                         </div>
+
+                            
                     </div>
 
-                    <div class="genres">
-                        <span>Action & Adventure</span>
-                        <span>Sci-Fi & Fantasy</span>
-                        <span>Drama</span>
+                    <div class="genres-section">
+                        <span class="label">Genres</span>
+                            <span class="genre-item">Action & Adventure,Sci-Fi & Fantasy,Drama</span>
                     </div>
 
                     <div class="cast-section">
                         <h3>top cast</h3>
                         <div class="cast-list">
+                            <div class="cast-item">
+                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
+                                <div class="cast-info">
+                                    <span class="actor-name">maxwell jenkins</span>
+                                    <span class="character-name">tony slack</span>
+                                </div>
+                            </div>
                             <div class="cast-item">
                                 <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
                                 <span class="actor-name">maxwell jenkins</span>
@@ -114,79 +132,77 @@
             </div>
 
             <div class="comments-section">
-                <div class="avatar-placeholder">
-                    <img src="../assets/avatars/user-avatar.jpg" alt="User">
-                </div>
-
-                <div class="comment-input-container">
+                <div class="comment-input-wrapper">
+                    <img src="../assets/images/avatar.png" alt="User Avatar">
+                    <div class="input-container">
+                        <input type="text" placeholder="your comment...">
+                    </div>
                     <button class="send-btn">
                         <i class='bx bx-send'></i>
                     </button>
                 </div>
 
                 <div class="comment">
-                    <img src="../assets/avatars/serkan.jpg" alt="Serkan" class="comment-avatar">
                     <div class="comment-content">
                         <div class="comment-header">
-                            <span class="username">Serkan Rahimli</span>
+                             <div class="title">
+                              <img src="../assets/images/avatar.png" alt="user" class="comment-avatar">
+                              <span class="username">Serkhan Rahimii</span>
+                            </div>
                             <span class="time">16:32 today</span>
                         </div>
-                        <div class="comment-text">
-                            Yeah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
-                        </div>
+                        <p class="comment-text">
+                            Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="similar-section">
-                <h3 class="section-title">similar movies <span class="arrow">></span></h3>
-                
-                <div class="slider-container">
-                    <div class="movies-slider">
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>Game of thrones</h4>
+                <h3 class="section-title">similar movies</h3>
+                <div class="movies-slider">
+                    <div class="movie-card">
+                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
+                        <div class="movie-overlay">
+                            <div class="movie-info">
+                                <span class="category">Sci-Fi & Fantasy</span>
+                                <div class="rating">★★★★★</div>
+                                <h4>Game of thrones</h4>
+                            </div>
+                        <a class="watch-now">Watch Now </a>
                         </div>
-
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="The Falcon and the Winter Soldier">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>The Falcon and the Winter Soldier</h4>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
+                        <div class="movie-overlay">
+                            <div class="movie-info">
+                                <span class="category">Sci-Fi & Fantasy</span>
+                                <div class="rating">★★★★★</div>
+                                <h4>Game of thrones</h4>
+                            </div>
+                            <a class="watch-now">Watch Now</a>
                         </div>
-
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="WandaVision">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>WandaVision</h4>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
+                        <div class="movie-overlay">
+                            <div class="movie-info">
+                                <span class="category">Sci-Fi & Fantasy</span>
+                                <div class="rating">★★★★★</div>
+                                <h4>Game of thrones</h4>
+                            </div>
+                            <a class="watch-now">Watch Now</a>
                         </div>
-                        
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="WandaVision">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>WandaVision</h4>
-                        </div>
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="WandaVision">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>WandaVision</h4>
-                        </div>
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="WandaVision">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>WandaVision</h4>
-                        </div>
-                        <div class="movie-card">
-                            <img src="../assets/images/moviecard.jpg" alt="WandaVision">
-                            <span class="category">Sci-Fi & Fantasy</span>
-                            <div class="rating">★★★★★</div>
-                            <h4>WandaVision</h4>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
+                        <div class="movie-overlay">
+                            <div class="movie-info">
+                                <span class="category">Sci-Fi & Fantasy</span>
+                                <div class="rating">★★★★★</div>
+                                <h4>Game of thrones</h4>
+                            </div>
+                            <a class="watch-now">Watch Now</a>
                         </div>
                     </div>
                 </div>
