@@ -18,7 +18,7 @@
 }
 
 section.main .header{
-  padding: 40px 0 40px 80px;
+  padding: 40px 0 40px 10px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -51,7 +51,6 @@ section.main .header span{
   object-fit:cover;
 }
 
-/* Style the active bullet */
 .swiper-pagination-bullet-active {
   background: white; 
 }
@@ -69,7 +68,7 @@ section.comedy{
   top: 0;
   width: 100%;
   height: 700px;
-  z-index: -1; /* Arka planda kal */
+  z-index: -1; 
   overflow: hidden;
 }
 
@@ -103,11 +102,11 @@ section.comedy{
     display: inline-block;
     border-top-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    margin-bottom: 15px;
     font-size: 14px;
+    margin-bottom: 15px;
 }
 .home-carousel .content .favorite-stars{
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: white;
 }
 .home-carousel .content .favorite-stars span{
@@ -147,9 +146,75 @@ section.comedy{
   cursor: pointer;
 
 }
+.action, .comedy{
+  margin-left: 50px;
+}
 
 
 /* Home Carousel End*/
+.slide-content{
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slide-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+}
+
+.slide-overlay .category{
+  padding: 5px 10px;
+  background-color: #2c2c2c;
+  color: #0FEFFD;
+  display: inline-block;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.slide-overlay .rating{
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.slide-overlay .title{
+  font-size: 26px;
+  font-weight: bold;
+}
+.slide-overlay .watch-now{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+
+.slide-content:hover img {
+  transform: scale(1.05);
+  transition: all .6s ease-out;
+}
+
+.slide-content:hover .slide-info {
+  transform: translateY(-10px);
+  transition: all .6s ease-out;
+}
+ .slide-content:hover .watch-now{
+ opacity: 1;
+ visibility:visible;
+ display: block;
+}
+
+
 
 @media (max-width: 576px) {
     .home-carousel .swiper {
