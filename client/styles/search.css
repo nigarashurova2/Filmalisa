@@ -1,196 +1,191 @@
-.search-header{
-    padding: 120px 40px 30px 110px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.search-header {
+  padding: 120px 40px 30px 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.search-header .search-title{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    cursor: pointer;
+.search-header .search-title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
 }
 
-.search-header .search-title h1{
-    font-size: 35px;
-    font-weight: 500;
+.search-header .search-title h1 {
+  font-size: 35px;
+  font-weight: 500;
 }
 
-.search-header .search-title span{
-    font-size: 28px;
-    font-weight: 500;
-    position: relative;
-    top: 3px;
+.search-header .search-title span {
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+  top: 3px;
 }
 .searchInput {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .searchInput input {
-    width: 260px;
-    color: #fff;
-    padding: 12px;
-    border: 2px solid #808080;
-    border-radius: 4px;
-    outline: none;
-    font-size: 16px;
-    background: #000;
-    flex: 1; 
+  width: 260px;
+  color: #fff;
+  padding: 12px;
+  border: 2px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  background: #000;
+  flex: 1;
 }
 
-.searchInput input::placeholder{
-    color: #BCBCBC;
-    font-size: 16px;
+.searchInput input::placeholder {
+  color: #bcbcbc;
+  font-size: 16px;
 }
 
 .searchInput .searchBtn {
-    background: #2A2A2A;
-    border: 2px solid #fff;
-    border-radius: 50%; 
-    color:#fff;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
+  background: #2a2a2a;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-
-.results{
-    padding:20px 40px 40px 110px ;
+.results {
+  padding: 20px 40px 40px 110px;
 }
 
 .movies {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr)); 
-    gap: 8px; 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 8px;
 }
 
 .movie-card {
-    position: relative; 
-    overflow: hidden;
-    max-width: 292px; 
-    cursor: pointer;
-    margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  max-width: 380px;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .movie-card img {
-    width: 100%;
-    height: auto;
-    display: block; 
-    object-fit: cover;
-    transition: transform .5s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-
 .movie-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px;
-    height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  height: 50%;
 }
 
 .movie-info {
-    position: absolute;
-    bottom: 40px;
-    left: 30px;
-    transform: translateY(0);
-    transition: transform .5s ease;
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
 }
 
 .movie-card h4 {
-    color: #fff;
-    font-size: 24px;
-    margin: 0;
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
 }
 
-.movie-card .category{
-    display: inline-block;
-    background: #1D1D1D80;
-    color: #0FEFFD;
-    font-size: 16px;
-    padding: 3px;
-    border-radius: 4px;
-    margin-bottom: 12px;
+.movie-card .category {
+  display: inline-block;
+  background: #1d1d1d80;
+  color: #0feffd;
+  font-size: 16px;
+  padding: 3px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
-.movie-card .rating{
-    color: #fff;
-    letter-spacing: 2px;
-    font-size: 16px;
-    margin-bottom: 10px;
+.movie-card .rating {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .movie-card:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .movie-card:hover .movie-info {
-    transform: translateY(-40px);
+  transform: translateY(-40px);
 }
 
 .watch-now {
-    position: absolute;
-    left: 30px;
-    bottom:25%;
-    color: #fff;
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+  position: absolute;
+  left: 30px;
+  bottom: 25%;
+  color: #fff;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
 }
 
 .movie-card:hover .watch-now {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 @media screen and (max-width: 952px) {
-    .movies{
-        grid-template-columns: repeat(3, minmax(200px, 1fr));
-    }
+  .movies {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
 }
 
 @media screen and (max-width: 792px) {
-    .search-header .search-title span{
-        display: none;
-    }
+  .search-header .search-title span {
+    display: none;
+  }
 }
 
-
 @media screen and (max-width: 740px) {
-    .search-header .search-title{
-        display: none;
-    }
+  .search-header .search-title {
+    display: none;
+  }
 
-    .searchInput{
-        width: 100%;
-    }
+  .searchInput {
+    width: 100%;
+  }
 
-    .movies{
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        gap: 10px;
-    }
+  .movies {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 553px) {
-    .movies{
-        grid-template-columns: 1fr;
-        justify-items: center;
-        align-items: center; 
-    }
-    .searchInput .searchBtn{
-        display: none;
-    }
+  .movies {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .searchInput .searchBtn {
+    display: none;
+  }
 }
-
