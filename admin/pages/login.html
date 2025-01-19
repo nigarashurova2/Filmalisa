@@ -17,28 +17,35 @@
         />
         <h1 class="logo-title">Admin</h1>
       </div>
-      <div class="admin-section">
-        <div class="input-section">
-          <div class="username-block">
-            <input class="username" type="text" placeholder="username" />
-            <img
-              class="message-icon"
-              src="../assets/images/sms@2x.png"
-              alt=""
-            />
+     
+        <div class="admin-section">
+          <form id="loginForm">
+          <div class="input-section">
+            <div class="username-block">
+              <input class="username" id="email" type="text" placeholder="Email" />
+              <img
+                class="message-icon"
+                src="../assets/images/sms@2x.png"
+                alt=""
+              />
+            </div>
+            <div class="password-section">
+              <input class="password" type="text" placeholder="password" />
+              <img
+                class="key-icon"
+                src="../assets/images/Left Icon.png"
+                alt="key"
+              />
+              <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
+            </div>
+            <button type="submit" class="btn" id="loginBtn">Login</button>
           </div>
-          <div class="password-section">
-            <input class="password" type="text" placeholder="password" />
-            <img
-              class="key-icon"
-              src="../assets/images/Left Icon.png"
-              alt="key"
-            />
-            <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
-          </div>
-          <button class="btn">login</button>
+        </form>
         </div>
-      </div>
+  
+      
     </div>
+
+    <script src="../js/login.js"></script>
   </body>
 </html>
