@@ -87,4 +87,32 @@ const comedy_swiper = new Swiper('.comedy-carousel .swiper', {
       }
     }
   });
+  const favourite_carousel = new Swiper('.favourite-carousel .swiper', {
+    loop: true,
+    spaceBetween: 30,
+   
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    breakpoints: {
+      500: {
+            slidesPerView: 1,
+            spaceBetween: 0
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 0
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 0
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 0
+      }
+    }
+  });
+
 

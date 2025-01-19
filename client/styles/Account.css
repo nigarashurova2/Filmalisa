@@ -2,57 +2,23 @@ body {
   background-color: #1d1d1d;
   margin: 0;
 }
+
 .container {
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
 }
-.client-section {
+.account-section {
   display: flex;
 }
-
-.input-block {
-  width: 35px;
-  background-color: #1f1f1f;
-}
-.about-input {
-  width: 100%;
-  text-align: center;
-}
-.about-input span {
-  font-family: numans;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 80px;
-  color: #c3c8d4;
-}
-
-.about-input img {
-  margin-top: 20px;
-}
-.input-title {
-  font-family: numans;
-  font-weight: 400;
-  font-size: 65px;
-  line-height: 80px;
-  color: #c3c8d4;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.login-section {
-  width: 618px;
-  height: 472px;
-  background-color: #5c5959;
-}
-
 .aside-section {
+  height: 100vh;
   width: 56px;
   margin-left: 20px;
   text-align: center;
   background-color: #1a1a1a;
   box-shadow: 0 3px 10px rgba(34, 33, 33, 0.5);
 }
-
 .aside-icon {
   margin-top: 40px;
   margin-bottom: 64px;
@@ -61,18 +27,30 @@ body {
   margin-bottom: 80px;
   cursor: pointer;
 }
+.block-section {
+  width: 35px;
+  background-color: #1f1f1f;
+}
+.account-input {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.account-input img {
+  margin-top: 50px;
+}
 
 .input-section {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .username-block {
   position: relative;
-  width: 547px;
+  width: 559px;
   height: 64px;
   background-color: #0000;
   border-radius: 12px;
@@ -82,22 +60,22 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: -1px;
+  top: -30px;
   left: 16px;
   cursor: pointer;
 }
 .username {
-  width: 475px;
+  width: 447px;
   height: 40px;
   position: absolute;
   background-color: #1a1a1a;
   border: 0;
-  right: 16px;
+  right: 50px;
   top: 12px;
 }
 .password-section {
   position: relative;
-  width: 547px;
+  width: 559px;
   height: 64px;
   background-color: #0000;
   border-radius: 12px;
@@ -105,7 +83,7 @@ body {
 }
 
 .password {
-  width: 435px;
+  width: 447px;
   height: 40px;
   position: absolute;
   top: 12px;
@@ -116,32 +94,23 @@ body {
 .key-icon {
   position: absolute;
   left: 16px;
-  top: -1px;
+  top: -30px;
   cursor: pointer;
 }
 .eye-icon {
   position: absolute;
   right: 16px;
-  top: -1px;
+  top: -30px;
   cursor: pointer;
 }
-.link {
-  position: absolute;
-}
-.register-link {
-  position: relative;
-  top: 240px;
-  right: 176px;
-  font-size: 14px;
-  color: #99a3be;
-}
+
 .btn {
-  width: 547px;
-  height: 56px;
+  width: 559px;
+  height: 64px;
   border-radius: 12px;
   background-color: #9b51e0;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 40px;
   border: 0;
   font-size: 16px;
   color: #fff;
