@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-.sidebar {
+/* .sidebar {
     width: 50px;
     height: 100%;
     position: absolute;
@@ -35,7 +35,7 @@ body {
 
 .sidebar .logo {
     margin: 10px 0;
-}
+} */
 
 .icon-btn {
     width: 35px;
