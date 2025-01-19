@@ -530,6 +530,7 @@ body {
     background: #000;
     color:#FFAD49;
     padding: 4px;
+    cursor: pointer;
 }
 .add-btn {
     width: 32px;
@@ -557,6 +558,11 @@ body {
     transform: translateY(20px);
     transition: all 0.3s ease;
 }
+
+    .yt-iframe{
+        width: 100%;
+        height: 400px;
+    }
 
 @media screen and (min-width: 1440px) {
     .similar-section {
