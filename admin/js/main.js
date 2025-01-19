@@ -33,6 +33,15 @@ delCloseModalBtn.addEventListener("click", function (event) {
     console.log(modal);
     modal.classList.remove("show")
 })
+
+if(closeBtn.length){
+    closeBtn.forEach(btn=>{
+        btn.addEventListener("click", function (event) {
+     let modal = event.target.closest(".modal")
+     modal.classList.remove("show")
+        })
+    })
+}
 // MODAL END //
 
 
