@@ -15,57 +15,83 @@
   <body>
     <div class="container">
       <div class="client-section">
-        <aside class="aside-section">
+        <!-- <aside class="aside-section">
           <img class="aside-icon" src="../assets/images/Animate2.png" alt="" />
           <img class="icon" src="../assets/images/Icon button.svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (1).svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (2).svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (3).svg" alt="" />
-        </aside>
+        </aside> -->
         <div class="input-block"></div>
-        <div class="about-input">
-          <img src="../assets/images/image 1.png" alt="" />
-          <h1 class="input-title">filmalisa</h1>
-          <span>register</span>
+        <form id="registerForm" class="about-input">
+          <div class="">
+            <img src="../assets/images/image 1.png" alt="" />
+            <h1 class="input-title">filmalisa</h1>
+            <span>register</span>
 
-          <div class="input-section">
-            <div class="password-section">
-              <input class="password" type="text" placeholder="full name" />
-              <img
-                class="key-icon"
-                src="../assets/images/Left Icon.png"
-                alt="key"
-              />
-              <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
-            </div>
-            <div class="username-block">
-              <input class="username" type="text" placeholder="email" />
-              <img
-                class="message-icon"
-                src="../assets/images/sms@2x.png"
-                alt=""
-              />
-            </div>
+            <div class="input-section">
+              <div class="password-section">
+                <input
+                  class="password"
+                  type="text"
+                  id="full_name"
+                  placeholder="full name"
+                />
+                <img
+                  class="key-icon"
+                  src="../assets/images/Left Icon.png"
+                  alt="key"
+                />
+                <img
+                  class="eye-icon"
+                  src="../assets/images/eye.png"
+                  alt="eye"
+                />
+              </div>
+              <div class="username-block">
+                <input
+                  class="username"
+                  type="text"
+                  placeholder="email"
+                  id="email"
+                />
+                <img
+                  class="message-icon"
+                  src="../assets/images/sms@2x.png"
+                  alt=""
+                />
+              </div>
 
-            <div class="password-section">
-              <input class="password" type="text" placeholder="password" />
-              <img
-                class="key-icon"
-                src="../assets/images/Left Icon.png"
-                alt="key"
-              />
-              <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
-            </div>
-            <div class="link">
-              <a class="register-link" href=""
-                >Do you have a account? Login here</a
-              >
-            </div>
+              <div class="password-section">
+                <input
+                  class="password"
+                  id="password"
+                  type="password"
+                  placeholder="password"
+                />
+                <img
+                  class="key-icon"
+                  src="../assets/images/Left Icon.png"
+                  alt="key"
+                />
+                <img
+                  class="eye-icon"
+                  src="../assets/images/eye.png"
+                  alt="eye"
+                />
+              </div>
+              <div class="link">
+                <a class="register-link" href="./login.html"
+                  >Do you have a account? Login here</a
+                >
+              </div>
 
-            <button class="btn">register</button>
+              <button class="btn">register</button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
+    <script src="../js/register.js"></script>
   </body>
 </html>

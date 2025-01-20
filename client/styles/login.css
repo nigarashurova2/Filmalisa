@@ -18,6 +18,12 @@ body {
   width: 100%;
   text-align: center;
 }
+
+.about-input input {
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+}
 .about-input span {
   font-family: numans;
   font-weight: 500;
@@ -146,4 +152,9 @@ body {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+}
+
+.error_message {
+  color: red;
+  font-size: 16px;
 }
