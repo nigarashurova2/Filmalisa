@@ -30,7 +30,6 @@ if(editBtn.length) editBtn.forEach(btn=>{
 
 delCloseModalBtn.addEventListener("click", function (event) {
     let modal = event.target.closest(".modal")
-    console.log(modal);
     modal.classList.remove("show")
 })
 
