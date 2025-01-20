@@ -89,59 +89,42 @@
         </header>
 
         <div class="table-container">
-            <table class="table rounded-table">
+            <table class="table rounded-table" id="actorsTable">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Overview</th>
-                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>IMG</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Title 1</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Title 2</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
+                
                 </tbody>
             </table>
         </div>
 
 
       </main>
+
+      <div id="editModal" class="modal">
+        <div class="modal-content modal-md">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="mainForm" id="editActorForm">
+                    <div class="form-left">
+                      <input type="text" id="categoryName" name="categoryName" placeholder="category name">
+                      <div class="form-footer">
+                            <button type="submit" class="submit-btn full-width">Submit</button>
+                         </div>
+                  </form>
+            </div>
+          
+          </div>
+    </div>
     </div>
 
 
@@ -171,32 +154,14 @@
             <div class="modal-body">
                     <form class="mainForm" id="createMovieForm">
                       <div class="form-left">
-                        <input type="text" id="title" name="title" placeholder="Title">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                                
+                        <input type="text" id="surname" name="surname" placeholder="Surname">
+
+                        <input type="text" id="img_url" name="img_url" placeholder="Img URL">
                 
-                        <textarea id="overview" name="overview" placeholder="Overview"></textarea>
-                
-                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
-                
-                        <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
-                
-                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
-                
-                        <input type="text" id="imdb" name="imdb" placeholder="IMDB">
-                
-                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
-                
-                        <select id="category" name="category">
-                          <option value="action">Category</option>
-                          <option value="drama">Drama</option>
-                          <option value="sci-fi">Sci-Fi</option>
-                        </select>
                 
                        <div class="form-footer">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="adult" name="adult">
-                            <label for="adult">Adult</label>
-                          </div>
-                  
                           <button type="submit" class="submit-btn">Submit</button>
                        </div>
                       </div>
@@ -209,54 +174,14 @@
           </div>
     </div>
 
-    <div id="editModal" class="modal">
-        <div class="modal-content modal-md">
-        
-            <div class="modal-body">
-                    <form class="mainForm" id="editMovieForm">
-                      <div class="form-left">
-                        <input type="text" id="title" name="title" placeholder="Title">
-                
-                        <textarea id="overview" name="overview" placeholder="Overview"></textarea>
-                
-                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
-                
-                        <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
-                
-                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
-                
-                        <input type="text" id="imdb" name="imdb" placeholder="IMDB">
-                
-                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
-                
-                        <select id="category" name="category">
-                          <option value="action">Category</option>
-                          <option value="drama">Drama</option>
-                          <option value="sci-fi">Sci-Fi</option>
-                        </select>
-                
-                       <div class="form-footer">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="adult" name="adult">
-                            <label for="adult">Adult</label>
-                          </div>
-                  
-                          <button type="submit" class="submit-btn">Submit</button>
-                       </div>
-                      </div>
-                      <div class="form-right">
-                        <img src="https://s3-alpha-sig.figma.com/img/712a/01ff/1934ab4d59fb658ae9e9619a2f283725?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hxBXy0iQL9oKEQxgclgwcT1t9RbWo6SofWETgTJoaSo76spomyuge~kPpGg4G6BafyWhL7l-XLfINL-HBjWJtTedcThatacsL1BCz5b6uT-f0eBOwb-HeS4OPo-ZhVt94rJo0pB1~F-wPZHG~hYlbHNxGg6yrNRgrN035iwWb7MRilZHS1ewtzUCgIm-WBjVMhCFd~qOy17g0rRrKOUKQznf--3TpaxFb1ii755kAmYtpJYFv~Gu3r5FG1P9i~WuDYGB06DPa1I6IJeC2MdctOu81tQwypmlFnP9iaZD3pRMRKH-M8L5VBv2YEpPC~a9RetUIE~JA87-s5CVTGp3qA__" alt="Movie Poster">
-                      </div>
-                    </form>
-            </div>
-          
-          </div>
-    </div>
+
+    
     <!-- MODALS  -->
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="../js/auth.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/actors.js"></script>
   </body>
 
 </html>
