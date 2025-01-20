@@ -89,7 +89,7 @@
         </header>
 
         <div class="table-container w-30">
-            <table class="table rounded-table">
+            <table class="table rounded-table" id="categoryTable">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -98,38 +98,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
+                  
                 </tbody>
             </table>
         </div>
@@ -146,7 +115,7 @@
             <div class="modal-body">
                 <form class="mainForm" id="editCategoryForm">
                     <div class="form-left">
-                      <input type="text" id="categoryName" name="categoryName" placeholder="category name">
+                      <input type="text" id="editName" name="editName" placeholder="category name">
                       <div class="form-footer">
                             <button type="submit" class="submit-btn full-width">Submit</button>
                          </div>
@@ -196,6 +165,7 @@
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="../js/auth.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/categories.js"></script>
   </body>
 
 </html>
