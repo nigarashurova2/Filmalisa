@@ -15,22 +15,27 @@
   <body>
     <div class="container">
       <div class="client-section">
-        <aside class="aside-section">
+        <!-- <aside class="aside-section">
           <img class="aside-icon" src="../assets/images/Animate2.png" alt="" />
           <img class="icon" src="../assets/images/Icon button.svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (1).svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (2).svg" alt="" />
           <img class="icon" src="../assets/images/Icon button (3).svg" alt="" />
-        </aside>
+        </aside> -->
         <div class="input-block"></div>
-        <div class="about-input">
+        <form id="loginForm" class="about-input">
           <img src="../assets/images/image 1.png" alt="" />
           <h1 class="input-title">filmalisa</h1>
           <span>login</span>
 
           <div class="input-section">
             <div class="username-block">
-              <input class="username" type="text" placeholder="email" />
+              <input
+                class="username"
+                type="text"
+                placeholder="email"
+                id="email"
+              />
               <img
                 class="message-icon"
                 src="../assets/images/sms@2x.png"
@@ -39,7 +44,12 @@
             </div>
 
             <div class="password-section">
-              <input class="password" type="text" placeholder="password" />
+              <input
+                class="password"
+                type="password"
+                placeholder="password"
+                id="password"
+              />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
@@ -48,13 +58,17 @@
               <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
             </div>
             <div class="link">
-              <a class="register-link" href="">Register here</a>
+              <a class="register-link" href="./register.html">Register here</a>
             </div>
+
+            <div class="error_message"></div>
 
             <button class="btn">login</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
+
+    <script src="../js/login.js"></script>
   </body>
 </html>
