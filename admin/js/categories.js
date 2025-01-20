@@ -171,7 +171,7 @@ const editCategory = async(event)=>{
                 editModal.classList.remove("show")
                 showData()
                 setTimeout(()=>{
-                    alert("Məlumat uğurla əlavə olundu!")
+                    alert("Məlumat uğurla redaktə olundu!")
                 }, 500)
             }
           
