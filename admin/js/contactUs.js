@@ -1,3 +1,8 @@
+
+window.addEventListener("load", async ()=>{
+    showData() 
+})
+
 const getContacts = async ()=>{
     try {
         const access_token = JSON.parse(localStorage.getItem("token"))
@@ -20,27 +25,6 @@ const getContacts = async ()=>{
 }
 
 
-const deleteContact = async (id)=>{
-
-    try {
-        const access_token = JSON.parse(localStorage.getItem("token"))
-        const options = {
-            method:"DELETE",
-            headers: { 
-                  "Authorization":`Bearer ${access_token}`,
-                  "Content-Type":"application/json"
-            }
-        }
-        const response = await fetch(`https://api.sarkhanrahimli.dev/api/filmalisa/admin/contact/${id}`, options)
-        if(response.ok){
-            showData()
-            alert("Məlumat uğurla silindi")
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}
-
 const renderContacts = (data)=>{
 
     const tbody = document.querySelector("#contactsTable tbody")
@@ -56,7 +40,7 @@ const renderContacts = (data)=>{
                         </div>
                         </td>
                         <td>
-                            <button class="delete-btn" onclick="deleteContact(${contact.id})"><i class='bx bxs-trash-alt' ></i></button>
+                            <button class="delete-btn" onclick='showDeleteModal(${contact.id})'><i class='bx bxs-trash-alt' ></i></button>
                         </td>
                     </tr>`
     }).join("")
@@ -65,9 +49,6 @@ const renderContacts = (data)=>{
 
 }
 
-window.addEventListener("load", async ()=>{
-    showData() 
-})
 
 async function showData() {
     const tbody = document.querySelector("#contactsTable tbody")
@@ -79,3 +60,43 @@ async function showData() {
     tbody.innerHTML = "<tr><td colspan='4'>No contacts found</td></tr>";
    }
 }
+
+
+
+// DELETE DATA //
+const showDeleteModal = async (id)=>{
+    let deleteModal = document.querySelector("#deleteModal")
+    deleteModal.classList.add("show")
+    localStorage.setItem("clickedId", JSON.stringify(id))
+}
+const delete_btn = document.querySelector(".remove-contact")
+delete_btn.addEventListener("click", deleteContact)
+
+
+async function deleteContact() {
+    try {
+      const id = localStorage.getItem("clickedId")
+      const access_token = JSON.parse(localStorage.getItem("token"))
+      const options = {
+          method:"DELETE",
+          headers: { 
+                "Authorization":`Bearer ${access_token}`,
+                "Content-Type":"application/json"
+          }
+      }
+      const response = await fetch(`https://api.sarkhanrahimli.dev/api/filmalisa/admin/contact/${id}`, options)
+      if(response.ok){
+          let deleteModal = document.querySelector("#deleteModal")
+          deleteModal.classList.remove("show")
+          localStorage.setItem("clickedId", null)
+          showData()
+          setTimeout(()=>{
+              alert("Məlumat uğurla silindi")
+          }, 500)
+          
+      }
+  } catch (error) {
+      console.log(error)
+  }
+}
+
