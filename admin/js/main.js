@@ -46,3 +46,29 @@ if(closeBtn.length){
 
 
 
+// FETCH PROFILE //
+window.addEventListener("load", getProfile)
+
+async function getProfile() {
+    const adminProfile = document.querySelector(".admin-profile .admin-name")
+    try {
+        const access_token = JSON.parse(localStorage.getItem("token"))
+        const options = {
+            method:"GET",
+            headers: { 
+                  "Authorization":`Bearer ${access_token}`,
+                  "Content-Type":"application/json"
+            },
+        }
+        const response = await fetch("https://api.sarkhanrahimli.dev/api/filmalisa/profile", options)
+        if(response.ok){
+            const responseData = await response.json()
+            const full_name = responseData.data.full_name
+            adminProfile.textContent = full_name
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
