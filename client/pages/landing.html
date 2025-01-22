@@ -1,191 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmalisa - Movie Search Platform</title>
-    <link rel="stylesheet" href="../styles/landing.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/landing.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="../assets/images/landing_logo.png" alt="Filmalisa">
-                <span>filmalisa</span>
-            </div>
-            <button class="sign-in">Sign In</button>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img src="../assets/images/landing_logo.png" alt="Filmalisa" />
+          <span>filmalisa</span>
+        </div>
+        <button class="sign-in">Sign In</button>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Unlimited movies, TV shows, and more</h1>
-            <p>Filmalisa is a movie search platform</p>
-            <div class="email-signup">
-                <p>Ready to watch? Enter your email to create or restart membership</p>
-                <div class="form-group">
-                    <input type="email" placeholder="Email address">
-                    <button class="get-started">Get Started ></button>
-                </div>
+      <section class="hero">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <p>Filmalisa is a movie search platform</p>
+        <div class="email-signup">
+          <p>
+            Ready to watch? Enter your email to create or restart membership
+          </p>
+          <div class="form-group">
+            <input type="email" placeholder="Email address" />
+            <button class="get-started">Get Started ></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tv-section">
+        <div class="feature">
+          <div class="feature-text">
+            <h2>Enjoy on your TV</h2>
+            <p>
+              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+              Blu-ray players, and more.
+            </p>
+          </div>
+          <div class="feature-image">
+            <img src="../assets/images/screen_preview.png" alt="TV" />
+          </div>
+        </div>
+      </section>
+
+      <section class="devices-section">
+        <div class="feature">
+          <div class="feature-image">
+            <img src="../assets/images/tv.png" alt="Devices" />
+          </div>
+          <div class="feature-text">
+            <h2>Watch everywhere</h2>
+            <p>
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="kids-section">
+        <div class="feature">
+          <div class="feature-text">
+            <h2>Create profiles for kids</h2>
+            <p>
+              Send kids on adventures with their favorite characters in a space
+              made just for them—free with your membership.
+            </p>
+          </div>
+          <div class="feature-image">
+            <img src="../assets/images/kid.png" alt="Kids" />
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Contact us</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Fullname" name="full_name" />
+          <input type="email" placeholder="Email address" name="email" />
+          <textarea placeholder="Reason" name="reason"></textarea>
+          <button class="send-btn">Send</button>
+        </form>
+        <div id="message"></div>
+      </section>
+
+      <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is Filmalisa?</span>
+              <i class="plus-icon">+</i>
             </div>
-        </section>
-
-        <section class="tv-section">
-            <div class="feature">
-                <div class="feature-text">
-                    <h2>Enjoy on your TV</h2>
-                    <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
-                </div>
-                <div class="feature-image">
-                    <img src="../assets/images/screen_preview.png" alt="TV">
-                </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
             </div>
-        </section>
+          </div>
 
-        <section class="devices-section">
-            <div class="feature">
-                <div class="feature-image">
-                    <img src="../assets/images/tv.png" alt="Devices">
-                </div>
-                <div class="feature-text">
-                    <h2>Watch everywhere</h2>
-                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-                </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How much does Filmalisa cost?</span>
+              <i class="plus-icon">+</i>
             </div>
-        </section>
-
-        <section class="kids-section">
-            <div class="feature">
-                <div class="feature-text">
-                    <h2>Create profiles for kids</h2>
-                    <p>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
-                </div>
-                <div class="feature-image">
-                    <img src="../assets/images/kid.png" alt="Kids">
-                </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
             </div>
-        </section>
+          </div>
 
-        <section class="contact">
-            <h2>Contact us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Fullname">
-                <input type="email" placeholder="Email address">
-                <textarea placeholder="Reason"></textarea>
-                <button class="send-btn">Send</button>
-            </form>
-        </section>
-
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is Filmalisa?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How much does Filmalisa cost?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Where can I watch?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How do I cancel?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What can I watch on Filmalisa?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is Filmalisa good for kids?</span>
-                        <i class="plus-icon">+</i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus vel culpa. Eum, unde tempore. Culpa fugit dolor eveniet ducimus?</p>
-                    </div>
-                </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Where can I watch?</span>
+              <i class="plus-icon">+</i>
             </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>FAQ</h3>
-                    <ul>
-                        <li><a href="#">Investor Relations</a></li>
-                        <li><a href="#">Buy Gift Cards</a></li>
-                        <li><a href="#">Cookie Preferences</a></li>
-                        <li><a href="#">Legal Notices</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Help Center</h3>
-                    <ul>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Ways to Watch</a></li>
-                        <li><a href="#">Corporate Information</a></li>
-                        <li><a href="#">Only on Filmalisa</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Account</h3>
-                    <ul>
-                        <li><a href="#">Filmalisa Shop</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Do Not Sell or Share Personal 
-                            Information</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Media Center</h3>
-                    <ul>
-                        <li><a href="#">Redeem Gift Cards</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Speed Test</a></li>
-                        <li><a href="#">Ad Choices</a></li>
-                    </ul>
-                </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
             </div>
-        </footer>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do I cancel?</span>
+              <i class="plus-icon">+</i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What can I watch on Filmalisa?</span>
+              <i class="plus-icon">+</i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is Filmalisa good for kids?</span>
+              <i class="plus-icon">+</i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique necessitatibus vel culpa. Eum, unde tempore. Culpa
+                fugit dolor eveniet ducimus?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>FAQ</h3>
+            <ul>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Buy Gift Cards</a></li>
+              <li><a href="#">Cookie Preferences</a></li>
+              <li><a href="#">Legal Notices</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Help Center</h3>
+            <ul>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Ways to Watch</a></li>
+              <li><a href="#">Corporate Information</a></li>
+              <li><a href="#">Only on Filmalisa</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Account</h3>
+            <ul>
+              <li><a href="#">Filmalisa Shop</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Do Not Sell or Share Personal Information</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Media Center</h3>
+            <ul>
+              <li><a href="#">Redeem Gift Cards</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Speed Test</a></li>
+              <li><a href="#">Ad Choices</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="../js/landing.js"></script>
-</body>
+  </body>
 </html>
