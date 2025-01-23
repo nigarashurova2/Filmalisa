@@ -3,23 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Account</title>
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="/client/styles/Account.css" />
   </head>
   <body>
     <div class="container">
       <div class="account-section">
-        <aside class="aside-section">
-          <img
-            class="aside-icon"
-            src="/admin/assets/images/filmalisa_logo.png  "
-            alt=""
-          />
-          <img class="icon" src="../assets/images/Icon button.svg" alt="" />
-          <img class="icon" src="../assets/images/Icon button (1).svg" alt="" />
-          <img class="icon" src="../assets/images/Icon button (2).svg" alt="" />
-          <img class="icon" src="../assets/images/Icon button (3).svg" alt="" />
-        </aside>
+        <div class="sidebar">
+          <a href="#" class="logo">
+              <img src="../../admin/assets/images/filmalisa_logo.png" width="50px" alt="logo">
+          </a>
+          <a href="./home.html" class="icon-btn ">
+              <i class='bx bx-home-alt-2'></i>
+          </a>
+          <a href="./search.html" class="icon-btn">
+              <i class='bx bx-film' ></i>
+          </a>
+          <a href="#" class="icon-btn activeLink">
+              <i class='bx bx-tv' ></i>
+          </a>
+          <a href="./favourite.html" class="icon-btn ">
+              <i class='bx bx-star' ></i>
+          </a>
+      </div>
+      
         <div class="block-section"></div>
         <div class="account-input">
           <img src="/admin/assets/images/Group 82.png" alt="" />
