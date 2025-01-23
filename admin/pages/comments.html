@@ -65,7 +65,7 @@
         <div class="logout">
           <a href="#">
             <i class='bx bxs-log-out'></i>
-            <span>Logout</span>
+            <span id="logout">Logout</span>
           </a>
         </div>
       </div>
@@ -86,7 +86,7 @@
         </header>
 
         <div class="table-container w-30">
-            <table class="table rounded-table">
+            <table class="table rounded-table" id="commentsTable">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -97,42 +97,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td>Action</td>
-                        <td><img src="../assets/images/image 1.png" alt=""></td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td>Action</td>
-                        <td><img src="../assets/images/image 1.png" alt=""></td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td>Action</td>
-                        <td><img src="../assets/images/image 1.png" alt=""></td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Action</td>
-                        <td>Action</td>
-                        <td><img src="../assets/images/image 1.png" alt=""></td>
-                        <td> 
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
@@ -140,8 +105,6 @@
 
       </main>
     </div>
-
-
 
 
 
@@ -157,7 +120,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="modal-close-btn del-modal-close">İmtina</button>
-            <button type="button" class="danger-btn remove-movie">Sil</button>
+            <button type="button" class="danger-btn remove-comment">Sil</button>
           </div>
         </div>
     </div>
@@ -165,10 +128,10 @@
 
 
     <!-- MODALS  -->
-
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="../js/auth.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/comments.js"></script>
   </body>
 
 </html>

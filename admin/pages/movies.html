@@ -65,7 +65,7 @@
         <div class="logout">
           <a href="#">
             <i class='bx bxs-log-out'></i>
-            <span>Logout</span>
+            <span id="logout">Logout</span>
           </a>
         </div>
       </div>
@@ -89,7 +89,7 @@
         </header>
 
         <div class="table-container">
-            <table class="table rounded-table">
+            <table class="table rounded-table" id="moviesTable">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -101,50 +101,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Title 1</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Title 2</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit' ></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Title 3</td>
-                        <td>Lorem</td>
-                        <td>Category 1</td>
-                        <td>12.6</td>
-                        <td> 
-                            <button class="edit-btn"><i class='bx bx-edit'></i></button>
-                            <button class="delete-btn"><i class='bx bxs-trash-alt' ></i></button>
-                        </td>
-                    </tr>
+              
                 </tbody>
             </table>
         </div>
@@ -187,20 +144,18 @@
                 
                         <textarea id="overview" name="overview" placeholder="Overview"></textarea>
                 
-                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
+                        <input type="text" id="cover_url" name="cover_url" placeholder="Cover URL">
                 
                         <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
                 
-                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
+                        <input type="text" id="watch_url" name="watch_url" placeholder="Watch URL">
                 
                         <input type="text" id="imdb" name="imdb" placeholder="IMDB">
                 
-                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
+                        <input type="number" id="run_time_min" name="run_time_min" placeholder="Run Time">
                 
-                        <select id="category" name="category">
-                          <option value="action">Category</option>
-                          <option value="drama">Drama</option>
-                          <option value="sci-fi">Sci-Fi</option>
+                        <select id="category" name="category" class="category">
+                        
                         </select>
                 
                        <div class="form-footer">
@@ -213,7 +168,7 @@
                        </div>
                       </div>
                       <div class="form-right">
-                        <img src="https://s3-alpha-sig.figma.com/img/712a/01ff/1934ab4d59fb658ae9e9619a2f283725?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hxBXy0iQL9oKEQxgclgwcT1t9RbWo6SofWETgTJoaSo76spomyuge~kPpGg4G6BafyWhL7l-XLfINL-HBjWJtTedcThatacsL1BCz5b6uT-f0eBOwb-HeS4OPo-ZhVt94rJo0pB1~F-wPZHG~hYlbHNxGg6yrNRgrN035iwWb7MRilZHS1ewtzUCgIm-WBjVMhCFd~qOy17g0rRrKOUKQznf--3TpaxFb1ii755kAmYtpJYFv~Gu3r5FG1P9i~WuDYGB06DPa1I6IJeC2MdctOu81tQwypmlFnP9iaZD3pRMRKH-M8L5VBv2YEpPC~a9RetUIE~JA87-s5CVTGp3qA__" alt="Movie Poster">
+                        <img src="../assets/images/movie-img.jpeg" alt="Movie Poster">
                       </div>
                     </form>
             </div>
@@ -243,10 +198,8 @@
                 
                         <input type="number" id="runtime" name="runtime" placeholder="Run Time">
                 
-                        <select id="category" name="category">
-                          <option value="action">Category</option>
-                          <option value="drama">Drama</option>
-                          <option value="sci-fi">Sci-Fi</option>
+                        <select id="editCategory" name="editcategory" class="category">
+                         
                         </select>
                 
                        <div class="form-footer">
@@ -259,7 +212,7 @@
                        </div>
                       </div>
                       <div class="form-right">
-                        <img src="https://s3-alpha-sig.figma.com/img/712a/01ff/1934ab4d59fb658ae9e9619a2f283725?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hxBXy0iQL9oKEQxgclgwcT1t9RbWo6SofWETgTJoaSo76spomyuge~kPpGg4G6BafyWhL7l-XLfINL-HBjWJtTedcThatacsL1BCz5b6uT-f0eBOwb-HeS4OPo-ZhVt94rJo0pB1~F-wPZHG~hYlbHNxGg6yrNRgrN035iwWb7MRilZHS1ewtzUCgIm-WBjVMhCFd~qOy17g0rRrKOUKQznf--3TpaxFb1ii755kAmYtpJYFv~Gu3r5FG1P9i~WuDYGB06DPa1I6IJeC2MdctOu81tQwypmlFnP9iaZD3pRMRKH-M8L5VBv2YEpPC~a9RetUIE~JA87-s5CVTGp3qA__" alt="Movie Poster">
+                        <img src="../assets/images/movie-img.jpeg" alt="Movie Poster">                      
                       </div>
                     </form>
             </div>
@@ -271,6 +224,7 @@
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="../js/auth.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/movies.js"></script>
   </body>
 
 </html>

@@ -206,14 +206,14 @@ header {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 180px;
+  min-width: 180px;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px;
+  padding: 7px;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 100%;
   left: 50%;
   margin-left: -60px;
@@ -373,7 +373,6 @@ button {
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -386,7 +385,7 @@ button {
 .modal-content {
   background: #171616;
   margin: 5% auto;
-  border: 1px solid #171616;
+  border: 1px solid rgb(64, 63, 63);
   border-radius: 15px;
   width: 50%;
 }
@@ -405,7 +404,7 @@ button {
 
 .close:hover,
 .close:focus {
-  color: black;
+  /* color: black; */
   text-decoration: none;
   cursor: pointer;
 }
@@ -475,8 +474,8 @@ button {
   width: 100%;
   padding: 15px 20px;
   border-radius: 12px;
-  border: 1px solid #323b54;
-  color: #323b54;
+  border: 1px solid #788dc6;
+  color: #788dc6;
   font-size: 14px;
   background-color: transparent;
   gap: 16px;
@@ -490,7 +489,10 @@ button {
 .form-left input::placeholder,
 .form-left textarea::placeholder,
 .form-left textarea {
-  color: #323b54;
+  color: #788dc6;
+}
+input:focus, textarea:focus{
+  outline: none;
 }
 
 .mainForm .checkbox-container {

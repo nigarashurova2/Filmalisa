@@ -103,7 +103,7 @@ const showDeleteModal = async (id)=>{
     deleteModal.classList.add("show")
     localStorage.setItem("clickedId", JSON.stringify(id))
 }
-const delete_btn = document.querySelector(".remove-movie")
+const delete_btn = document.querySelector(".remove-category")
 delete_btn.addEventListener("click", deleteCategory)
 
 async function deleteCategory() {

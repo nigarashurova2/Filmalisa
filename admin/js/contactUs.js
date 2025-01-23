@@ -28,7 +28,7 @@ const getContacts = async ()=>{
 const renderContacts = (data)=>{
 
     const tbody = document.querySelector("#contactsTable tbody")
-   let html =  data.map((contact,index)=>{
+    let html =  data.map((contact,index)=>{
     const reasonData = contact.reason.length > 10 ? ((contact.reason).slice(0,20)).concat('...') : contact.reason
     return `<tr>
                          <td>${contact.id}</td>
