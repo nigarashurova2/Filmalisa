@@ -83,7 +83,7 @@
 
 .movie-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
   transition: transform 0.5s ease;
@@ -142,6 +142,7 @@
   left: 30px;
   bottom: 25%;
   color: #fff;
+  text-decoration: none;
   font-size: 18px;
   opacity: 0;
   transform: translateY(20px);
