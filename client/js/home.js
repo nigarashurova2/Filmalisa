@@ -16,7 +16,6 @@ const getCategories = async function () {
         let response = await fetch('https://api.sarkhanrahimli.dev/api/filmalisa/categories', options)
         if(response.ok){
             let resData = await response.json();
-            console.log(resData, "resdata")
             return resData.data
         }
         
