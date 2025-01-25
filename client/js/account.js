@@ -61,6 +61,12 @@ async function updateProfile(event) {
         let response = await fetch('https://api.sarkhanrahimli.dev/api/filmalisa/profile', options)
         if(response.ok){
             getProfile()
+            Swal.fire({
+                title: 'Seccessfully!',
+                text: 'Profile successfully edited!',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              });
         }
         
     } catch (error) {

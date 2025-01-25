@@ -23,7 +23,18 @@ loginForm.addEventListener("submit", async function (e) {
       const resData = await response.json();
       const token = resData.data.tokens.access_token;
       if (token) localStorage.setItem("client_token", JSON.stringify(token));
-      window.location.href = "home.html";
+      Swal.fire({
+        title: 'Success',
+        text: 'Login successful!',
+        icon: 'success',
+        position: 'center-center',
+        showConfirmButton: false,
+        timer: 2000 
+      }).then(() => {
+        window.location.href = "home.html";
+      });
+     
+     
     } else {
       document.querySelector(".error_message").innerHTML =
         "Password or email is wrong";

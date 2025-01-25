@@ -23,7 +23,20 @@ registerForm.addEventListener("submit", async function (e) {
     );
     if (response.ok) {
       const data = await response.json();
-      if (data.result) window.location.href = "login.html";
+    
+      if (data.result){
+        Swal.fire({
+          title: 'Success',
+          text: 'Register successful!',
+          icon: 'success',
+          position: 'center-center',
+          showConfirmButton: false,
+          timer: 2000 
+        }).then(() => {
+          window.location.href = "login.html";
+        });
+      }
+    
     }
   } catch (e) {
     console.log(e);

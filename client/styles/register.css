@@ -153,3 +153,8 @@ body {
   color: #fff;
   cursor: pointer;
 }
+input{
+  background: transparent !important;
+  outline: none;
+  border: none;
+}
