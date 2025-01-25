@@ -178,6 +178,7 @@ const toggleFavorite = async function () {
 
 const initializePage = () => {
   const id = window.location.hash.split("#")[1];
+  if (!id) window.location.href = "404NotFound.html";
   if (id) {
     getMovieDetails(id);
     getComments(id);
