@@ -1,229 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost in Space - Filmalisa</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../styles/film-detail.css">
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/film-detail.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar">
-            <a href="#" class="logo">
-                <img src="../../admin/assets/images/filmalisa_logo.png" width="50px" alt="logo">
-            </a>
-            <a href="#" class="icon-btn activeLink">
-                <i class='bx bx-home-alt-2'></i>
-            </a>
-            <a href="#" class="icon-btn">
-                <i class='bx bx-film' ></i>
-            </a>
-            <a href="#" class="icon-btn">
-                <i class='bx bx-tv' ></i>
-            </a>
-            <a href="#" class="icon-btn">
-                <i class='bx bx-star' ></i>
-            </a>
+      <div class="sidebar">
+        <a href="#" class="logo">
+          <img
+            src="../../admin/assets/images/filmalisa_logo.png"
+            width="50px"
+            alt="logo"
+          />
+        </a>
+        <a href="#" class="icon-btn activeLink">
+          <i class="bx bx-home-alt-2"></i>
+        </a>
+        <a href="#" class="icon-btn">
+          <i class="bx bx-film"></i>
+        </a>
+        <a href="#" class="icon-btn">
+          <i class="bx bx-tv"></i>
+        </a>
+        <a href="#" class="icon-btn">
+          <i class="bx bx-star"></i>
+        </a>
+      </div>
+
+      <div class="main-content">
+        <div class="hero-banner">
+          <div class="blur-title-section">
+            <div class="category-text">
+              <span id="categoryName">Loading...</span>
+            </div>
+
+            <h1 id="title">Loading...</h1>
+          </div>
         </div>
 
-        <div class="main-content">
-            <div class="hero-banner">
-                <div class="blur-title-section">
-                    <div class="category-text">
-                    <span>MaileHereko </span><span>/</span><span>TV Shows</span></div>
-                   
-                    <h1>lost In space</h1>
-                </div>
+        <div class="movie-details">
+          <div class="poster-container">
+            <a id="coverImgLink" target="_blank">
+              <img id="coverImg" src="../assets/images/loading.gif" />
+            </a>
+          </div>
+
+          <div class="info-container">
+            <div class="title-row">
+              <h2>have you seen our robot?</h2>
+              <div class="watch-link modalBtn">
+                <span>Watch Link</span>
+              </div>
+              <button class="add-btn" id="toggleFavorite">+</button>
             </div>
 
-            <div class="movie-details">
-                <div class="poster-container">
-                    <img src="../assets/images/movie-img.jpg" alt="Lost in Space">
-                </div>
+            <p class="description" id="overview">Loading...</p>
 
-                <div class="info-container">
-                    <div class="title-row">
-                        <h2>have you seen our robot?</h2>
-                        <div class="watch-link modalBtn">
-                            <span>Watch Link</span>
-                        </div>
-                        <button class="add-btn">+</button>
-                    </div>
-
-                    <p class="description">
-                        The mission to save Scarecrow takes an unexpected turn, throwing the Resolute into chaos. Judy hatches a plan to get a ship to Alpha Centauri.
-                    </p>
-
-                    <div class="rating">
-                        <i class='bx bxs-star'></i>
-                        <span>8.1</span>
-                    </div>
-
-                    <div class="info-section">
-                        <div class="info-grid">
-                            <div class="info-item">
-                                <span class="label">Type</span>
-                                <span class="value">TV Show</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="label">Status</span>
-                                <span class="value">Returning Series</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="label">First air date</span>
-                                <span class="value">2018-04-13</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="label">Last air date</span>
-                                <span class="value">2019-04-24</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="label">No. of episodes</span>
-                                <span class="value">20</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="label">Episode run time</span>
-                                <span class="value">56 min</span>
-                            </div>
-                        </div>
-
-                            
-                    </div>
-
-                    <div class="genres-section">
-                        <span class="label">Genres</span>
-                            <span class="genre-item">Action & Adventure,Sci-Fi & Fantasy,Drama</span>
-                    </div>
-
-                    <div class="cast-section">
-                        <h3>top cast</h3>
-                        <div class="cast-list">
-                            <div class="cast-item">
-                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
-                                <div class="cast-info">
-                                    <span class="actor-name">maxwell jenkins</span>
-                                    <span class="character-name">tony slack</span>
-                                </div>
-                            </div>
-                            <div class="cast-item">
-                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
-                                <span class="actor-name">maxwell jenkins</span>
-                                <span class="character-name">tony slack</span>
-                            </div>
-                            <div class="cast-item">
-                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
-                                <span class="actor-name">maxwell jenkins</span>
-                                <span class="character-name">tony slack</span>
-                            </div>
-                            <div class="cast-item">
-                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
-                                <span class="actor-name">maxwell jenkins</span>
-                                <span class="character-name">tony slack</span>
-                            </div>
-                            <div class="cast-item">
-                                <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins">
-                                <span class="actor-name">maxwell jenkins</span>
-                                <span class="character-name">tony slack</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <span id="imdb">Loading...</span>
             </div>
 
-            <div class="comments-section">
-                <div class="comment-input-wrapper">
-                    <img src="../assets/images/avatar.png" alt="User Avatar">
-                    <div class="input-container">
-                        <input type="text" placeholder="your comment...">
-                    </div>
-                    <button class="send-btn">
-                        <i class='bx bx-send'></i>
-                    </button>
+            <div class="info-section">
+              <div class="info-grid">
+                <div class="info-item">
+                  <span class="label">Type</span>
+                  <span class="value">TV Show</span>
                 </div>
-
-                <div class="comment">
-                    <div class="comment-content">
-                        <div class="comment-header">
-                             <div class="title">
-                              <img src="../assets/images/avatar.png" alt="user" class="comment-avatar">
-                              <span class="username">Serkhan Rahimii</span>
-                            </div>
-                            <span class="time">16:32 today</span>
-                        </div>
-                        <p class="comment-text">
-                            Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
-                        </p>
-                    </div>
+                <div class="info-item">
+                  <span class="label">Status</span>
+                  <span class="value">Returning Series</span>
                 </div>
+                <div class="info-item">
+                  <span class="label">First air date</span>
+                  <span class="value">2018-04-13</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Last air date</span>
+                  <span class="value">2019-04-24</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">No. of episodes</span>
+                  <span class="value">20</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Episode run time</span>
+                  <span class="value" id="episode">56 min</span>
+                </div>
+              </div>
             </div>
 
-            <div class="similar-section">
-                <h3 class="section-title">similar movies</h3>
-                <div class="movies-slider">
-                    <div class="movie-card">
-                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
-                        <div class="movie-overlay">
-                            <div class="movie-info">
-                                <span class="category">Sci-Fi & Fantasy</span>
-                                <div class="rating">★★★★★</div>
-                                <h4>Game of thrones</h4>
-                            </div>
-                        <a class="watch-now">Watch Now </a>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
-                        <div class="movie-overlay">
-                            <div class="movie-info">
-                                <span class="category">Sci-Fi & Fantasy</span>
-                                <div class="rating">★★★★★</div>
-                                <h4>Game of thrones</h4>
-                            </div>
-                            <a class="watch-now">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
-                        <div class="movie-overlay">
-                            <div class="movie-info">
-                                <span class="category">Sci-Fi & Fantasy</span>
-                                <div class="rating">★★★★★</div>
-                                <h4>Game of thrones</h4>
-                            </div>
-                            <a class="watch-now">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="../assets/images/moviecard.jpg" alt="Game of Thrones">
-                        <div class="movie-overlay">
-                            <div class="movie-info">
-                                <span class="category">Sci-Fi & Fantasy</span>
-                                <div class="rating">★★★★★</div>
-                                <h4>Game of thrones</h4>
-                            </div>
-                            <a class="watch-now">Watch Now</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="genres-section">
+              <span class="label">Genres</span>
+              <span class="genre-item"
+                >Action & Adventure,Sci-Fi & Fantasy,Drama</span
+              >
             </div>
 
+            <div class="cast-section">
+              <h3>top cast</h3>
+              <div class="cast-list">
+                <!-- <div class="cast-item">
+                  <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins" />
+                  <div class="cast-info">
+                    <span class="actor-name">maxwell jenkins</span>
+                    <span class="character-name">tony slack</span>
+                  </div>
+                </div> -->
+                <!-- <div class="cast-item">
+                  <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins" />
+                  <span class="actor-name">maxwell jenkins</span>
+                  <span class="character-name">tony slack</span>
+                </div>
+                <div class="cast-item">
+                  <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins" />
+                  <span class="actor-name">maxwell jenkins</span>
+                  <span class="character-name">tony slack</span>
+                </div>
+                <div class="cast-item">
+                  <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins" />
+                  <span class="actor-name">maxwell jenkins</span>
+                  <span class="character-name">tony slack</span>
+                </div>
+                <div class="cast-item">
+                  <img src="../assets/images/cast.jpg" alt="Maxwell Jenkins" />
+                  <span class="actor-name">maxwell jenkins</span>
+                  <span class="character-name">tony slack</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="comments-section">
+          <form id="addComment" class="comment-input-wrapper">
+            <img src="../assets/images/avatar.png" alt="User Avatar" />
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="your comment..."
+                name="comment"
+                id="commentInput"
+              />
+            </div>
+            <button type="submit" class="send-btn">
+              <i class="bx bx-send"></i>
+            </button>
+          </form>
+
+          <div class="comment-list">
+            <!-- <div class="comment">
+              <div class="comment-content">
+                <div class="comment-header">
+                  <div class="title">
+                    <img
+                      src="../assets/images/avatar.png"
+                      alt="user"
+                      class="comment-avatar"
+                    />
+                    <span class="username">Serkhan Rahimii</span>
+                  </div>
+                  <span class="time">16:32 today</span>
+                </div>
+                <p class="comment-text">
+                  Woah, your project looks awesome! How long have you been
+                  coding for? I'm still new, but think I want to dive into React
+                  as well soon. Perhaps you can give me an insight on where I
+                  can learn React? Thanks!
+                </p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="similar-section">
+          <h3 class="section-title">similar movies</h3>
+          <div class="movies-slider">
+            <div class="movie-card">
+              <img src="../assets/images/moviecard.jpg" alt="Game of Thrones" />
+              <div class="movie-overlay">
+                <div class="movie-info">
+                  <span class="category">Sci-Fi & Fantasy</span>
+                  <div class="rating">★★★★★</div>
+                  <h4>Game of thrones</h4>
+                </div>
+                <a class="watch-now">Watch Now </a>
+              </div>
+            </div>
+            <div class="movie-card">
+              <img src="../assets/images/moviecard.jpg" alt="Game of Thrones" />
+              <div class="movie-overlay">
+                <div class="movie-info">
+                  <span class="category">Sci-Fi & Fantasy</span>
+                  <div class="rating">★★★★★</div>
+                  <h4>Game of thrones</h4>
+                </div>
+                <a class="watch-now">Watch Now</a>
+              </div>
+            </div>
+            <div class="movie-card">
+              <img src="../assets/images/moviecard.jpg" alt="Game of Thrones" />
+              <div class="movie-overlay">
+                <div class="movie-info">
+                  <span class="category">Sci-Fi & Fantasy</span>
+                  <div class="rating">★★★★★</div>
+                  <h4>Game of thrones</h4>
+                </div>
+                <a class="watch-now">Watch Now</a>
+              </div>
+            </div>
+            <div class="movie-card">
+              <img src="../assets/images/moviecard.jpg" alt="Game of Thrones" />
+              <div class="movie-overlay">
+                <div class="movie-info">
+                  <span class="category">Sci-Fi & Fantasy</span>
+                  <div class="rating">★★★★★</div>
+                  <h4>Game of thrones</h4>
+                </div>
+                <a class="watch-now">Watch Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="modalElement" class="modal">
-        <div class="modal-content modal-md">
-            <div class="modal-header">
-                <span class="close" id="closeBtn">&times;</span>
-            </div>
-            <div class="modal-body">
-                <iframe class="yt-iframe"  src="https://www.youtube.com/embed/XGGXlj6grzQ?si=c9JVOARdjpPU8-aL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          
-          </div>
+      <div class="modal-content modal-md">
+        <div class="modal-header">
+          <span class="close" id="closeBtn">&times;</span>
+        </div>
+        <div class="modal-body">
+          <iframe
+            class="yt-iframe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
     <script src="../scripts/slider.js"></script>
     <script src="../js/main.js"></script>
-</body>
+    <script src="../js/film-detail.js"></script>
+  </body>
 </html>
