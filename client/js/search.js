@@ -1,3 +1,4 @@
+const searchBtn = document.querySelector(".searchBtn");
 const searchInput = document.getElementById("searchInput");
 const movieContainer = document.querySelector(".movies");
 const debounceDelay = 300;
@@ -58,17 +59,17 @@ async function getMovies() {
   }
 }
 
-function debounce(func, delay) {
-  let timerId;
-  return function (...args) {
-    clearTimeout(timerId);
-    timerId = setTimeout(() => func.apply(this, args), delay);
-  };
-}
+// function debounce(func, delay) {
+//   let timerId;
+//   return function (...args) {
+//     clearTimeout(timerId);
+//     timerId = setTimeout(() => func.apply(this, args), delay);
+//   };
+// }
 
-const debouncedGetMovies = debounce(getMovies, debounceDelay);
+// const debouncedGetMovies = debounce(getMovies, debounceDelay);
 
-searchInput.addEventListener("input", debouncedGetMovies);
+searchBtn.addEventListener("click", getMovies);
 
 window.onload = function () {
   getMovies();
