@@ -1,5 +1,6 @@
  .swiper {
     width: 100%;
+    height: 700px;
   }
   .home-carousel .swiper {
     width: 100%;
@@ -36,28 +37,30 @@ section.main .header span{
   top: 5px;
 }
 
-.action-carousel .swiper{
-  max-height: 450px;
-}
 
-.comedy-carousel .swiper{
-  height: 650px;
-  width: 100%;
-}
+
 
 .slide-content img{
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
+  object-fit:contain;
 }
 
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background: rgb(208, 206, 206) ; 
+
+}
 .swiper-pagination-bullet-active {
   background: white; 
+
 }
 
 
-section.comedy{
-  padding-bottom: 50px;
+
+
+
+section.main{
+  padding-bottom: 30px;
 }
 
 
@@ -146,7 +149,7 @@ section.comedy{
   cursor: pointer;
 
 }
-.action, .comedy{
+section.main{
   margin-left: 50px;
 }
 
@@ -247,3 +250,13 @@ section.comedy{
       font-size: 14px;
     }
 }
+
+
+
+
+
+
+
+
+
+

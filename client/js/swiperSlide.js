@@ -30,37 +30,37 @@ const home_swiper = new Swiper('.home-carousel .swiper', {
 });
 
 
-const action_swiper = new Swiper('.action-carousel .swiper', {
-    loop: true,
-    spaceBetween: 30,
+// const action_swiper = new Swiper('.main .firstSwiper .swiper', {
+//     loop: true,
+//     spaceBetween: 30,
    
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
-    breakpoints: {
-      500: {
-            slidesPerView: 2,
-            spaceBetween: 10
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 15
-      },
-      1280: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      }
-    }
-  });
+//     // pagination: {
+//     //   el: ".swiper-pagination",
+//     //   clickable: true,
+//     // },
+//     breakpoints: {
+//       500: {
+//             slidesPerView: 2,
+//             spaceBetween: 10
+//       },
+//       768: {
+//         slidesPerView: 3,
+//         spaceBetween: 10
+//       },
+//       1024: {
+//         slidesPerView: 4,
+//         spaceBetween: 15
+//       },
+//       1280: {
+//         slidesPerView: 5,
+//         spaceBetween: 20
+//       }
+//     }
+//   });
   
 
 
-const comedy_swiper = new Swiper('.comedy-carousel .swiper', {
+const comedy_swiper = new Swiper('.secondSwiper .swiper', {
     loop: true,
     spaceBetween: 30,
    
