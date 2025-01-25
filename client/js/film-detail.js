@@ -42,12 +42,14 @@ const renderMovieDetails = (data) => {
     actors,
     overview,
   } = data;
-
+  let videoId = fragman.split("/").pop().split("?")[0];
+  let embedUrl = `https://www.youtube.com/embed/${videoId}`;
   elements.overview.textContent = overview ?? "No overview available.";
   elements.imdb.textContent = imdb ?? "N/A";
   elements.title.textContent = title ?? "Untitled";
   elements.episode.textContent = runTimeMin ?? "Unknown";
-  elements.ytIframe.src = fragman ?? "";
+
+  elements.ytIframe.src = embedUrl ?? "";
   elements.heroBanner.style.backgroundImage = `url(${coverUrl ?? ""})`;
   elements.categoryName.textContent = category?.name ?? "Uncategorized";
   elements.coverImgLink.href = watchUrl ?? "#";
