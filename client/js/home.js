@@ -43,7 +43,7 @@ const renderCategories = async function () {
                     ${category.movies
                       .map(
                         (movie) => `
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" onclick='goFilmDetailPage("${movie.id}")'>
                         <div class="slide-content">
                           <img src="${movie.cover_url}" alt="${movie.title}">
                           <div class="slide-overlay">
@@ -119,6 +119,9 @@ const renderCategories = async function () {
     }
 }
 
+function goFilmDetailPage(id) {
+  window.location.href = "film-detail.html#"+id
+}
 
 function watchMovieFragman(fragmanLink) {
   let frame = document.querySelector(".yt-iframe")
