@@ -31,23 +31,25 @@
       
         <div class="block-section"></div>
         <div class="account-input">
-          <img src="/admin/assets/images/Group 82.png" alt="" />
-          <div class="input-section">
+          <img class="profile_url" src="" alt="" />
+            <form id="profileForm">
+
             <div class="password-section">
               <input
                 class="password"
+                name="img_url"
                 type="text"
-                placeholder="profile image url"
+                placeholder="Profile image url"
               />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
                 alt="key"
               />
-              <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
+              <img class="eye-icon eye-show" src="../assets/images/eye.png" alt="eye" />
             </div>
             <div class="password-section">
-              <input class="password" type="text" placeholder="full name" />
+              <input class="password" name="fullname" type="text" placeholder="Full name" />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
@@ -56,7 +58,7 @@
               <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
             </div>
             <div class="username-block">
-              <input class="username" type="text" placeholder="email" />
+              <input class="username" type="text" placeholder="Email" name="email" />
               <img
                 class="message-icon"
                 src="../assets/images/sms@2x.png"
@@ -65,7 +67,7 @@
             </div>
 
             <div class="password-section">
-              <input class="password" type="text" placeholder="password" />
+              <input class="password" type="text" placeholder="Password" name="password" />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
@@ -74,10 +76,13 @@
               <img class="eye-icon" src="../assets/images/eye.png" alt="eye" />
             </div>
 
-            <button class="btn">save</button>
-          </div>
+            <button type="submit" class="btn">Save</button>
+
+          </form>
         </div>
       </div>
     </div>
   </body>
+
+  <script src="../js/account.js"></script>
 </html>

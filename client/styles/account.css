@@ -40,7 +40,7 @@ body {
   margin-top: 50px;
 }
 
-.input-section {
+#profileForm {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -115,4 +115,25 @@ body {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+}
+input{
+  background: transparent !important;
+  color: white;
+}
+
+input:focus{
+  background: transparent !important;
+  border: none;
+  outline: none;
+}
+.profile_url{
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(180deg, #72F435 0%, #027981 100%);
+  padding: 4px;
+}
+
+.hide{
+  display: none;
 }
