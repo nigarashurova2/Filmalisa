@@ -117,7 +117,7 @@ body {
 .poster-container {
   flex-shrink: 0;
   width: 580px;
-  height: 786px;
+  height: 820px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
