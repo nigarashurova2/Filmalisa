@@ -85,9 +85,15 @@ const createActor = async(event)=>{
             if(resData.result){
                 createModal.classList.remove("show")
                 showData()
-                setTimeout(()=>{
-                    alert("Məlumat uğurla əlavə olundu!")
-                }, 500)
+                
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Actor successfully added!',
+                    icon: 'success',
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2000 
+                  })
             }
           
         }
@@ -127,9 +133,15 @@ async function deleteActor() {
             deleteModal.classList.remove("show")
             localStorage.setItem("clickedId", null)
             showData()
-            setTimeout(()=>{
-                alert("Məlumat uğurla silindi")
-            }, 500)
+        
+            Swal.fire({
+                title: 'Success',
+                text: 'Actor successfully removed!',
+                icon: 'success',
+                position: 'center-center',
+                showConfirmButton: false,
+                timer: 2000 
+              })
             
         }
     } catch (error) {
@@ -177,9 +189,14 @@ const editActor = async(event)=>{
             if(resData.result){
                 editModal.classList.remove("show")
                 showData()
-                setTimeout(()=>{
-                    alert("Məlumat uğurla redaktə olundu!")
-                }, 500)
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Actor successfully edited!',
+                    icon: 'success',
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2000 
+                  })
             }
           
         }

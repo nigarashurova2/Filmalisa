@@ -11,5 +11,15 @@ window.addEventListener("DOMContentLoaded",()=>{
 // LOGOUT //
 const logout = document.querySelector(".logout")
 logout.addEventListener("click", ()=>{
-    localStorage.removeItem("token"); window.location.href = "login.html";
+    localStorage.removeItem("token"); 
+    Swal.fire({
+        title: 'Success',
+        text: 'Login successful!',
+        icon: 'success',
+        position: 'center-center',
+        showConfirmButton: false,
+        timer: 3000
+      }).then(() => {
+        window.location.href = "login.html";
+    });
 })

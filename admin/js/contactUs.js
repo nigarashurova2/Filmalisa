@@ -89,10 +89,15 @@ async function deleteContact() {
           let deleteModal = document.querySelector("#deleteModal")
           deleteModal.classList.remove("show")
           localStorage.setItem("clickedId", null)
-          showData()
-          setTimeout(()=>{
-              alert("Məlumat uğurla silindi")
-          }, 500)
+          showData()    
+          Swal.fire({
+            title: 'Success',
+            text: 'Contact successfully removed!',
+            icon: 'success',
+            position: 'center-center',
+            showConfirmButton: false,
+            timer: 2000 
+          })
           
       }
   } catch (error) {

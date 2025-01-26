@@ -29,9 +29,10 @@ const renderComments = (data)=>{
    let html =  data.map((comment,index)=>{
     return `<tr>
                 <td>${comment.id}</td>
-                <td>${comment.name}</td>
-                <td>${comment.name}</td>
-                <td>${comment.name}</td>
+                <td>${comment.comment}</td>
+                <td>${comment.movie.title}</td>
+                <td>
+                  <img src="${comment.movie.cover_url}" alt="img">
                 <td> 
                     <button class="delete-btn" onclick="showDeleteModal(${comment.id})"><i class='bx bxs-trash-alt' ></i></button>
                 </td>
@@ -46,7 +47,7 @@ async function showData() {
 
     const comments = await getComments()
    if(comments.length){
-    renderCategories(comments)
+    renderComments(comments)
    }else{
     tbody.innerHTML = "<tr><td colspan='5'>No comments found</td></tr>";
    }
@@ -66,6 +67,8 @@ delete_btn.addEventListener("click", deleteComment)
 async function deleteComment() {
       try {
         const id = localStorage.getItem("clickedId")
+        let comments = await getComments()
+        const movieId = comments.find(comment=> comment.id == id).movie.id
         const access_token = JSON.parse(localStorage.getItem("token"))
         const options = {
             method:"DELETE",
@@ -74,15 +77,21 @@ async function deleteComment() {
                   "Content-Type":"application/json"
             }
         }
-        const response = await fetch(`https://api.sarkhanrahimli.dev/api/filmalisa/admin/comment/${id}`, options)
+        const response = await fetch(`https://api.sarkhanrahimli.dev/api/filmalisa/admin/movies/${movieId}/comment/${id}`, options)
         if(response.ok){
             let deleteModal = document.querySelector("#deleteModal")
             deleteModal.classList.remove("show")
             localStorage.setItem("clickedId", null)
             showData()
-            setTimeout(()=>{
-                alert("Məlumat uğurla silindi")
-            }, 500)
+           
+            Swal.fire({
+                title: 'Success',
+                text: 'Comment successfully removed!',
+                icon: 'success',
+                position: 'center-center',
+                showConfirmButton: false,
+                timer: 2000 
+            })
             
         }
     } catch (error) {

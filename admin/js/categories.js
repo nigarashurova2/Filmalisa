@@ -82,9 +82,19 @@ const createCategory = async(event)=>{
             if(resData.result){
                 createModal.classList.remove("show")
                 showData()
-                setTimeout(()=>{
-                    alert("Məlumat uğurla əlavə olundu!")
-                }, 500)
+                // setTimeout(()=>{
+                //     alert("Məlumat uğurla əlavə olundu!")
+                // }, 500)
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Category successfully added!',
+                    icon: 'success',
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2000 
+                  }).then(() => {
+                    window.location.href = "index.html"
+                  });
             }
           
         }
@@ -123,9 +133,18 @@ async function deleteCategory() {
             deleteModal.classList.remove("show")
             localStorage.setItem("clickedId", null)
             showData()
-            setTimeout(()=>{
-                alert("Məlumat uğurla silindi")
-            }, 500)
+            // setTimeout(()=>{
+            //     alert("Məlumat uğurla silindi")
+            // }, 500)
+
+            Swal.fire({
+                title: 'Success',
+                text: 'Category successfully removed!',
+                icon: 'success',
+                position: 'center-center',
+                showConfirmButton: false,
+                timer: 2000 
+              })
             
         }
     } catch (error) {
@@ -170,9 +189,15 @@ const editCategory = async(event)=>{
             if(resData.result){
                 editModal.classList.remove("show")
                 showData()
-                setTimeout(()=>{
-                    alert("Məlumat uğurla redaktə olundu!")
-                }, 500)
+            
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Category successfully edited!',
+                    icon: 'success',
+                    position: 'center-center',
+                    showConfirmButton: false,
+                    timer: 2000 
+                  })
             }
           
         }

@@ -28,7 +28,17 @@ loginForm.addEventListener("submit", async(event)=>{
             
             let token = responseData.data.tokens.access_token;
             localStorage.setItem("token", JSON.stringify(token));
-            window.location.href = "index.html"
+            Swal.fire({
+                title: 'Success',
+                text: 'Login successful!',
+                icon: 'success',
+                position: 'center-center',
+                showConfirmButton: false,
+                timer: 3500 
+              }).then(() => {
+                window.location.href = "index.html"
+              });
+             
         } 
     } catch (error) {
         console.log(error)
