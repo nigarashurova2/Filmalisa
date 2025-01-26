@@ -153,8 +153,17 @@ const addComment = async function (e) {
       }
     );
 
-    getComments(id);
-    elements.commentInput.value = "";
+    Swal.fire({
+      title: "Success",
+      text: "Your comment added successfully",
+      icon: "success",
+      position: "center-center",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      getComments(id);
+      elements.commentInput.value = "";
+    });
   } catch (error) {
     console.error("Error adding comment:", error.message);
   }
@@ -170,7 +179,15 @@ const toggleFavorite = async function () {
         method: "POST",
       }
     );
-    console.log(data);
+
+    Swal.fire({
+      title: "Success",
+      text: data.message,
+      icon: "success",
+      position: "center-center",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } catch (error) {
     console.error("Eror adding favorite", error.message);
   }
@@ -178,6 +195,7 @@ const toggleFavorite = async function () {
 
 const initializePage = () => {
   const id = window.location.hash.split("#")[1];
+  if (!id) window.location.href = "404NotFound.html";
   if (id) {
     getMovieDetails(id);
     getComments(id);

@@ -187,6 +187,6 @@
     align-items: center;
   }
   .searchInput .searchBtn {
-    display: none;
+    font-size: 18px;
   }
 }

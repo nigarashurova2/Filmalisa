@@ -976,9 +976,7 @@ body {
   }
 }
 
-
-
-.comment-list{
+.comment-list {
   width: 53%;
   max-height: 500px;
   overflow-y: auto;

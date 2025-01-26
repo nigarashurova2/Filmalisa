@@ -43,8 +43,16 @@ contactForm.addEventListener("submit", async function (e) {
     );
 
     if (res.ok)
-      document.getElementById("message").textContent =
-        "Your message has been sent successfully";
+      Swal.fire({
+        title: "Success",
+        text: "Your message has been sent successfully!",
+        icon: "success",
+        position: "center-center",
+        showConfirmButton: false,
+        timer: 1000,
+      }).then(() => {
+        this.reset();
+      });
   } catch (e) {
     console.log(e);
   }
