@@ -170,7 +170,15 @@ const toggleFavorite = async function () {
         method: "POST",
       }
     );
-    console.log(data);
+
+    Swal.fire({
+      title: "Success",
+      text: data.message,
+      icon: "success",
+      position: "center-center",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   } catch (error) {
     console.error("Eror adding favorite", error.message);
   }
