@@ -153,8 +153,17 @@ const addComment = async function (e) {
       }
     );
 
-    getComments(id);
-    elements.commentInput.value = "";
+    Swal.fire({
+      title: "Success",
+      text: "Your comment added successfully",
+      icon: "success",
+      position: "center-center",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      getComments(id);
+      elements.commentInput.value = "";
+    });
   } catch (error) {
     console.error("Error adding comment:", error.message);
   }
