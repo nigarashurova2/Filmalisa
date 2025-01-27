@@ -56,30 +56,36 @@ const getCategories = async ()=>{
     }
 }
 
+const renderMovies = (movies, categories) => {
+    const tbody = document.querySelector("#moviesTable tbody");
+    let html = movies.map((movie, index) => {
+        const overview = movie.overview.length > 10 
+            ? movie.overview.slice(0, 20).concat('...') 
+            : movie.overview;
 
-const renderMovies = (movies, categories)=>{
-    const tbody = document.querySelector("#moviesTable tbody")
-   let html =  movies.map((movie,index)=>{
-    const overview = movie.overview.length > 10 ? ((movie.overview).slice(0,20)).concat('...') : movie.overview
-    return `<tr>
+        return `<tr>
                     <td>${movie.id}</td>
                     <td>${movie.title}</td>
                     <td>
-                    
-                      <div class="tooltip">${overview}
-                         <span class="tooltiptext">${movie.overview}</span>
+                        <div class="tooltip">${overview}
+                            <span class="tooltiptext">${movie.overview}</span>
                         </div>
                     </td>
                     <td>${movie.category.name}</td>
-                     <td>${movie.imdb}</td>
+                    <td>${movie.imdb}</td>
                     <td> 
-                        <button class="edit-btn"   onclick='showEditModal(${JSON.stringify(movie)})'><i class='bx bx-edit'></i></button>
-                        <button class="delete-btn" onclick="showDeleteModal(${movie.id})"><i class='bx bxs-trash-alt' ></i></button>
+                        <button class="edit-btn" onclick='showEditModal("${JSON.stringify(movie)}")'>
+                            <i class='bx bx-edit'></i>
+                        </button>
+                        <button class="delete-btn" onclick='showDeleteModal(${movie.id})'>
+                            <i class='bx bxs-trash-alt'></i>
+                        </button>
                     </td>
-            </tr>`
-    }).join("")
-    tbody.innerHTML = html
-}
+                </tr>`;
+    }).join("");
+
+    tbody.innerHTML = html;
+};
 
 async function showData() {
     const tbody = document.querySelector("#moviesTable tbody")
@@ -116,7 +122,7 @@ const createMovie = async(event)=>{
         run_time_min: Number(formData.get("run_time_min")),
         category: Number(createForm.category.value),
         adult: createForm.adult.checked,
-        actors: [12, 3]
+        actors: [220, 235]
     }
     console.log(newData, "newData")
     try {
@@ -141,7 +147,7 @@ const createMovie = async(event)=>{
                     title: 'Success',
                     text: 'Movie successfully added!',
                     icon: 'success',
-                    position: 'center-center',
+                    position: 'center',
                     showConfirmButton: false,
                     timer: 2000 
                   })
@@ -192,7 +198,7 @@ async function deleteCategory() {
                 title: 'Success',
                 text: 'Movie successfully removed!',
                 icon: 'success',
-                position: 'center-center',
+                position: 'center',
                 showConfirmButton: false,
                 timer: 2000 
               })
@@ -208,7 +214,7 @@ async function deleteCategory() {
 // EDIT DATA //
 const showEditModal = async (editData)=>{
     let editModal = document.querySelector("#editModal")
-    let editName = document.querySelector("#editName")
+    // let editName = document.querySelector("#editName")
     editModal.classList.add("show")
 
     localStorage.setItem("clickedId", JSON.stringify(editData.id))
@@ -243,7 +249,7 @@ const editMovie = async(event)=>{
                     title: 'Success',
                     text: 'Movie successfully edited!',
                     icon: 'success',
-                    position: 'center-center',
+                    position: 'center',
                     showConfirmButton: false,
                     timer: 2000 
                   })
@@ -256,3 +262,6 @@ const editMovie = async(event)=>{
     }
 }
 editForm.addEventListener("submit", editMovie)
+
+
+

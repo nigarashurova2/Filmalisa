@@ -158,6 +158,7 @@ const showEditModal = async (editData)=>{
     editForm.name.value = editData.name
     editForm.surname.value = editData.surname
     editForm.img_url.value = editData.img_url
+    document.querySelector(".actor-img").src = editData.img_url
     editModal.classList.add("show")
 
     localStorage.setItem("clickedId", JSON.stringify(editData.id))
