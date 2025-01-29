@@ -14,8 +14,9 @@ function renderMovies(movies) {
         title,
         category: { name: categoryName },
         watch_url: watchUrl,
+        id
       }) =>
-        `<div class="movie-card">
+        `<div class="movie-card" onclick='goFilmDetailPage("${id}")'>
   <img src="${coverUrl}" alt="${title}" />
   <div class="movie-overlay">
     <div class="movie-info">
@@ -74,3 +75,7 @@ searchBtn.addEventListener("click", getMovies);
 window.onload = function () {
   getMovies();
 };
+
+function goFilmDetailPage(id) {
+  window.location.href = "film-detail.html#"+id
+}

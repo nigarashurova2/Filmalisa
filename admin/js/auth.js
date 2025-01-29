@@ -1,7 +1,7 @@
-window.addEventListener("DOMContentLoaded",()=>{
-    const token = JSON.parse(localStorage.getItem("token"))
-    if(!token) window.location.href = 'login.html'
- })
+// window.addEventListener("DOMContentLoaded",()=>{
+//     const token = JSON.parse(localStorage.getItem("token"))
+//     if(!token) window.location.href = 'login.html'
+//  })
 
 
 
@@ -14,7 +14,7 @@ logout.addEventListener("click", ()=>{
     localStorage.removeItem("token"); 
     Swal.fire({
         title: 'Success',
-        text: 'Login successful!',
+        text: 'Logout successful!',
         icon: 'success',
         position: 'center-center',
         showConfirmButton: false,

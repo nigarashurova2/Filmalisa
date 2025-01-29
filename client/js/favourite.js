@@ -9,7 +9,7 @@ const renderFavouriteMovies = async function (data) {
   if(data && data.length){
     data.forEach((movie, index) => {
           content.innerHTML += `
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" onclick='goFilmDetailPage("${movie.id}")'>
                       <div class="slide-content">
                         <img src="${movie.cover_url}" alt="${movie.title}">
                         <div class="slide-overlay">
@@ -79,7 +79,9 @@ async function getUserFavouriteMovies() {
   }
 }
 
-
+function goFilmDetailPage(id) {
+  window.location.href = "film-detail.html#"+id
+}
 
 function watchMovieFragman(fragmanLink) {
   let frame = document.querySelector(".yt-iframe")

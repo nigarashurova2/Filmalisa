@@ -46,4 +46,8 @@ registerForm.addEventListener("submit", async function (e) {
 window.addEventListener("load", () => {
   const token = JSON.parse(localStorage.getItem("client_token"));
   if (token) window.location.href = "home.html";
+
+  const params = new URLSearchParams(window.location.search)
+  const email = params.get("email");
+  document.querySelector("#email").value = email
 });

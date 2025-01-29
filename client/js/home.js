@@ -126,7 +126,6 @@ function goFilmDetailPage(id) {
 function watchMovieFragman(fragmanLink) {
   let frame = document.querySelector(".yt-iframe")
 
-  // fragmanLink = "https://youtu.be/EP34Yoxs3FQ?si=42hXurs5CijaQpQu";
 
   let videoId = fragmanLink.split('/').pop().split('?')[0];
 

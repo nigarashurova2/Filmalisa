@@ -180,10 +180,11 @@ const toggleFavorite = async function () {
       }
     );
 
+    let check = data.message == "Successfully removed favorites"
     Swal.fire({
-      title: "Success",
+      title: check ? "Removed" : "Added",
       text: data.message,
-      icon: "success",
+      icon: check ? "error" : "success",
       position: "center-center",
       showConfirmButton: false,
       timer: 1500,

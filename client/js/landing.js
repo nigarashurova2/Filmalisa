@@ -57,3 +57,24 @@ contactForm.addEventListener("submit", async function (e) {
     console.log(e);
   }
 });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const get_started_btn = document.querySelector(".get-started") 
+get_started_btn.addEventListener("click", ()=>{
+  const email = document.querySelector(".email-signup .email").value
+  if (!email) {
+    Swal.fire({
+      title: "Warning",
+      text: "Please enter your email!",
+      icon: "warning",
+      position: "center-center",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      this.reset();
+    });
+    return;
+ }window.location.href = `register.html?email=${email}`;
+
+})
