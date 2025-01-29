@@ -10,7 +10,7 @@ async function getProfile() {
     profileForm.fullname.value = data.full_name
     profileForm.img_url.value = data.img_url
     profileForm.email.value = data.email
-    profile_url.src = data.img_url
+    profile_url.src = data.img_url || "../assets/images/profileImg_.jpg"
 }
 
 async function profileData() {

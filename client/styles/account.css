@@ -137,3 +137,14 @@ input:focus{
 .hide{
   display: none;
 }
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: white !important; /* Autofill zamanı mətn rəngini ağ edir */
+    color: white !important; /* Cursor rəngini ağ edir */
+    -webkit-box-shadow: 0 0 0px 1000px #1d1d1d inset !important; /* Autofill fon rəngini tünd saxlayır */
+    transition: background-color 5000s ease-in-out 0s; /* Brauzerin autofill rəngini dəyişməsini gecikdirir */
+}
