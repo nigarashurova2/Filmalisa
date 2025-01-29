@@ -87,10 +87,11 @@ const renderSimilarMovies = (data) => {
       category: { name: categoryName },
       watch_url: watchUrl,
       imdb = 1,
+      id
     }) => {
       let star = imdb;
       if (imdb > 5) star = 5;
-      return `    <div class="movie-card">
+      return `    <div class="movie-card" onclick='goFilmDetailPage("${id}")'>
       <img src="${coverUrl}" alt="${title}" />
       <div class="movie-overlay">
         <div class="movie-info">
@@ -98,7 +99,7 @@ const renderSimilarMovies = (data) => {
           <div class="rating">${"★".repeat(star)}</div>
           <h4>${title}</h4>
         </div>
-        <a class="watch-now" href=${watchUrl} target="_blank">Watch Now </a>
+        <a class="watch-now" href=${watchUrl} target="_blank">Watch Now  ></a>
       </div>
     </div>`;
     }
@@ -251,6 +252,12 @@ const initializePage = () => {
     getComments(id);
   }
 };
+
+function goFilmDetailPage(id) {
+  window.location.href = "film-detail.html#"+id
+  location.reload();
+
+}
 
 elements.toggleFavorite.addEventListener("click", toggleFavorite);
 elements.addCommentForm.addEventListener("submit", addComment);

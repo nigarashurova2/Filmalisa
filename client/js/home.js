@@ -33,6 +33,7 @@ const renderCategories = async function () {
             section.classList.add("main");
             let containerClassName = index % 2 == 0 ? 'firstSwiper' : 'secondSwiper'  
             if(!category.movies || !category.movies.length)return
+           
             section.innerHTML = `
               <div class="header">
                 <h1>${category.name}</h1> <span><i class='bx bxs-chevron-right'></i></span>
@@ -42,21 +43,24 @@ const renderCategories = async function () {
                   <div class="swiper-wrapper">
                     ${category.movies
                       .map(
-                        (movie) => `
+                        (movie) => {
+                        let star = movie.imdb;
+                        if (movie.imdb > 5) star = 5;
+                       return `
                       <div class="swiper-slide" onclick='goFilmDetailPage("${movie.id}")'>
                         <div class="slide-content">
                           <img src="${movie.cover_url}" alt="${movie.title}">
                           <div class="slide-overlay">
                             <div class="slide-info">
                               <span class="category">${movie.category.name}</span>
-                              <div class="rating">${"★".repeat(Math.floor(movie.rating))}</div>
+                              <div class="rating">${"★".repeat(star)}</div>
                               <h4 class="title">${movie.title}</h4>
                             </div>
                             <a class="watch-now" onclick='watchMovieFragman("${movie.fragman}")'>Watch Now ></a>
                           </div>
                         </div>
                       </div>
-                    `
+                    `}
                       )
                       .join('')}
                   </div>

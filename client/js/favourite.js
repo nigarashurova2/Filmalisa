@@ -7,18 +7,21 @@ window.onload = function () {
 const renderFavouriteMovies = async function (data) {
   const content = document.querySelector(".swiper-wrapper")
   if(data && data.length){
+    console.log(data, "data")
     data.forEach((movie, index) => {
+          let star = movie.imdb;
+          if (movie.imdb > 5) star = 5;
           content.innerHTML += `
                     <div class="swiper-slide" onclick='goFilmDetailPage("${movie.id}")'>
                       <div class="slide-content">
                         <img src="${movie.cover_url}" alt="${movie.title}">
                         <div class="slide-overlay">
                           <div class="slide-info">
-                            <span class="category"></span>
-                            <div class="rating">${"★".repeat(Math.floor(movie.rating))}</div>
+                            <span class="${movie.category?.name ? "category":''}">${movie.category?.name || ''}</span>
+                            <div class="rating">${"★".repeat(star)}</div>
                             <h4 class="title">${movie.title}</h4>
                           </div>
-                          <a class="watch-now" onclick='watchMovieFragman("${movie.fragman}")'>Watch Now ></a>
+                          <a class="watch-now" target="_blank" onclick='${movie.watch_url}'>Watch Now ></a>
                         </div>
                       </div>
                     </div>      
