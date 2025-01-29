@@ -585,3 +585,26 @@ input:focus, textarea:focus{
 .full-width{
   width: 100%;
 }
+
+
+
+/* Scroll barın genişliyini və rəngini dəyişmək */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Scroll barın arxa fon rəngi */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scroll barın sürüşən hissəsi */
+::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+}
+
+/* Hover edildikdə scroll barın rəngi */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
