@@ -225,6 +225,7 @@ body {
 
 .cast-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 15px;
@@ -293,7 +294,7 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 0;
-  gap: 0;
+  gap: 30px;
   scrollbar-width: none;
 }
 
@@ -302,7 +303,7 @@ body {
 }
 
 .movie-card {
-  flex: 0 0 450px;
+  flex: 0 0 400px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -312,7 +313,7 @@ body {
 
 .movie-card img {
   width: 100%;
-  height: 600px;
+  height: 520px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -538,6 +539,7 @@ body {
   color: #ffad49;
   padding: 4px;
   cursor: pointer;
+  text-decoration: none;
 }
 .add-btn {
   width: 32px;
@@ -564,11 +566,16 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .yt-iframe {
   width: 100%;
-  height: 400px;
+  height: 500px;
+}
+
+#coverImgLink {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1440px) {
@@ -718,7 +725,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .similar-section {
-    padding: 0 20px;
+    padding: 0 80px;
     margin-bottom: 80px;
   }
 
@@ -752,7 +759,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .similar-section {
-    padding: 0 15px;
+    padding: 0 70px;
   }
 
   .movie-card {

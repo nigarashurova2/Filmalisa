@@ -14,19 +14,23 @@ function renderMovies(movies) {
         title,
         category: { name: categoryName },
         watch_url: watchUrl,
-        id
-      }) =>
-        `<div class="movie-card" onclick='goFilmDetailPage("${id}")'>
+        id,
+        imdb,
+      }) => {
+        let star = imdb;
+        if (imdb > 5) star = 5;
+        return `<div class="movie-card" onclick='goFilmDetailPage("${id}")'>
   <img src="${coverUrl}" alt="${title}" />
   <div class="movie-overlay">
     <div class="movie-info">
       <span class="category">${categoryName}</span>
-      <div class="rating">★★★★★</div>
+      <div class="rating">${"★".repeat(star)}</div>
       <h4>${title}</h4>
     </div>
     <a class="watch-now" href='${watchUrl}' target='_blank'>Watch Now </a>
   </div>
-</div>`
+</div>`;
+      }
     )
     .join("");
 }
@@ -77,5 +81,5 @@ window.onload = function () {
 };
 
 function goFilmDetailPage(id) {
-  window.location.href = "film-detail.html#"+id
+  window.location.href = "film-detail.html#" + id;
 }

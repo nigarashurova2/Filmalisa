@@ -13,6 +13,8 @@ const elements = {
   commentList: document.querySelector(".comment-list"),
   commentInput: document.getElementById("commentInput"),
   toggleFavorite: document.getElementById("toggleFavorite"),
+  watchLink: document.querySelector(".watch-link"),
+  moviesSlider: document.querySelector(".movies-slider"),
 };
 
 const fetchWithAuth = async (url, options = {}) => {
@@ -52,8 +54,9 @@ const renderMovieDetails = (data) => {
   elements.ytIframe.src = embedUrl ?? "";
   elements.heroBanner.style.backgroundImage = `url(${coverUrl ?? ""})`;
   elements.categoryName.textContent = category?.name ?? "Uncategorized";
-  elements.coverImgLink.href = watchUrl ?? "#";
+  // elements.coverImgLink.href = watchUrl ?? "#";
   elements.coverImg.src = coverUrl ?? "";
+  elements.watchLink.href = watchUrl ?? "";
 
   elements.castList.innerHTML = actors?.length
     ? actors
@@ -71,6 +74,37 @@ const renderMovieDetails = (data) => {
     : "<p>No cast available.</p>";
 };
 
+const renderSimilarMovies = (data) => {
+  if (!data.length) {
+    elements.moviesSlider.innerHTML = "Similar movies not available";
+    return;
+  }
+
+  elements.moviesSlider.innerHTML = data.map(
+    ({
+      cover_url: coverUrl,
+      title,
+      category: { name: categoryName },
+      watch_url: watchUrl,
+      imdb = 1,
+    }) => {
+      let star = imdb;
+      if (imdb > 5) star = 5;
+      return `    <div class="movie-card">
+      <img src="${coverUrl}" alt="${title}" />
+      <div class="movie-overlay">
+        <div class="movie-info">
+          <span class="category">${categoryName}</span>
+          <div class="rating">${"★".repeat(star)}</div>
+          <h4>${title}</h4>
+        </div>
+        <a class="watch-now" href=${watchUrl} target="_blank">Watch Now </a>
+      </div>
+    </div>`;
+    }
+  );
+};
+
 const renderMovieComments = (comments) => {
   elements.commentList.innerHTML = comments
     .map((comment) => {
@@ -83,7 +117,7 @@ const renderMovieComments = (comments) => {
         hour12: false,
       };
       const date = new Intl.DateTimeFormat("en-US", options).format(
-        comment.createdAt
+        new Date(comment.created_at)
       );
       return ` <div class="comment">
   <div class="comment-content">
@@ -109,11 +143,26 @@ const renderMovieComments = (comments) => {
 
 const getMovieDetails = async (id) => {
   try {
-    const movieData = await fetchWithAuth(
+    const data = await fetchWithAuth(
       `https://api.sarkhanrahimli.dev/api/filmalisa/movies/${id}`
     );
-    if (movieData.data) {
-      renderMovieDetails(movieData.data);
+    const movieData = data.data;
+    if (movieData) {
+      renderMovieDetails(movieData);
+
+      const category = movieData.category.id;
+      if (category) {
+        const similarMovies = await fetchWithAuth(
+          `https://api.sarkhanrahimli.dev/api/filmalisa/movies/`
+        );
+        if (similarMovies.data.length) {
+          const similarCategoryMovies = similarMovies.data.filter(
+            (movie) =>
+              movie.category.id === category && movie.id !== movieData.id
+          );
+          renderSimilarMovies(similarCategoryMovies);
+        }
+      }
     }
   } catch (error) {
     console.error("Error fetching movie details:", error.message);
@@ -180,7 +229,7 @@ const toggleFavorite = async function () {
       }
     );
 
-    let check = data.message == "Successfully removed favorites"
+    let check = data.message == "Successfully removed favorites";
     Swal.fire({
       title: check ? "Removed" : "Added",
       text: data.message,
