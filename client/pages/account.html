@@ -3,39 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Account</title>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="/client/styles/account.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </head>
   <body>
     <div class="container">
       <div class="account-section">
         <div class="sidebar">
           <a href="./home.html" class="logo">
-              <img src="../../admin/assets/images/filmalisa_logo.png" width="50px" alt="logo">
+            <img
+              src="../../admin/assets/images/filmalisa_logo.png"
+              width="50px"
+              alt="logo"
+            />
           </a>
-          <a href="./home.html" class="icon-btn ">
-              <i class='bx bx-home-alt-2'></i>
+          <a href="./home.html" class="icon-btn">
+            <i class="bx bx-home-alt-2"></i>
           </a>
           <a href="./search.html" class="icon-btn">
-              <i class='bx bx-film' ></i>
+            <i class="bx bx-film"></i>
           </a>
           <a href="#" class="icon-btn activeLink">
-              <i class='bx bx-tv' ></i>
+            <i class="bx bx-tv"></i>
           </a>
-          <a href="./favourite.html" class="icon-btn ">
-              <i class='bx bx-star' ></i>
+          <a href="./favourite.html" class="icon-btn">
+            <i class="bx bx-star"></i>
           </a>
-      </div>
-      
+        </div>
+
         <div class="block-section"></div>
         <div class="account-input">
-          <img class="profile_url" src="../assets/images/profileImg_.jpg" alt="" />
-            <form id="profileForm">
-
+          <img
+            class="profile_url"
+            src="../assets/images/profileImg_.jpg"
+            alt=""
+          />
+          <form id="profileForm">
             <div class="password-section">
               <input
                 class="password"
@@ -50,7 +59,12 @@
               />
             </div>
             <div class="password-section">
-              <input class="password" name="fullname" type="text" placeholder="Full name" />
+              <input
+                class="password"
+                name="fullname"
+                type="text"
+                placeholder="Full name"
+              />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
@@ -58,7 +72,12 @@
               />
             </div>
             <div class="username-block">
-              <input class="username" type="text" placeholder="Email" name="email" />
+              <input
+                class="username"
+                type="text"
+                placeholder="Email"
+                name="email"
+              />
               <img
                 class="message-icon"
                 src="../assets/images/sms@2x.png"
@@ -67,7 +86,12 @@
             </div>
 
             <div class="password-section">
-              <input class="password" type="text" placeholder="Password" name="password" />
+              <input
+                class="password"
+                type="text"
+                placeholder="Password"
+                name="password"
+              />
               <img
                 class="key-icon"
                 src="../assets/images/Left Icon.png"
@@ -77,12 +101,11 @@
             </div>
 
             <button type="submit" class="btn">Save</button>
-
           </form>
         </div>
       </div>
     </div>
   </body>
-
+  <script src="../js/auth.js"></script>
   <script src="../js/account.js"></script>
 </html>
