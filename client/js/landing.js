@@ -1,6 +1,10 @@
 const contactForm = document.querySelector(".contact-form");
-
-document.addEventListener("DOMContentLoaded", function () {
+const signInButton = document.querySelector(".sign-in-button");
+const userProfile = document.querySelector(".user-profile");
+const profileImage = userProfile.querySelector("img");
+const profileFullName = userProfile.querySelector("span");
+const logoutBtn = document.getElementById("logout");
+document.addEventListener("DOMContentLoaded", async function () {
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
@@ -20,6 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  const token = JSON.parse(localStorage.getItem("client_token"));
+  if (token) {
+    const { img_url: imgUrl = "", full_name } = (await profileData()) || {};
+    console.log(await profileData());
+    signInButton.classList.add("display_none");
+    userProfile.classList.remove("display_none");
+    profileImage.src = imgUrl;
+    profileFullName.textContent = full_name;
+  }
 });
 
 contactForm.addEventListener("submit", async function (e) {
@@ -58,11 +72,10 @@ contactForm.addEventListener("submit", async function (e) {
   }
 });
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const get_started_btn = document.querySelector(".get-started") 
-get_started_btn.addEventListener("click", ()=>{
-  const email = document.querySelector(".email-signup .email").value
+const get_started_btn = document.querySelector(".get-started");
+get_started_btn.addEventListener("click", () => {
+  const email = document.querySelector(".email-signup .email").value;
   if (!email) {
     Swal.fire({
       title: "Warning",
@@ -75,6 +88,42 @@ get_started_btn.addEventListener("click", ()=>{
       this.reset();
     });
     return;
- }window.location.href = `register.html?email=${email}`;
+  }
+  window.location.href = `register.html?email=${email}`;
+});
 
-})
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("client_token");
+  Swal.fire({
+    title: "Success",
+    text: "Logout successful!",
+    icon: "success",
+    position: "center-center",
+    showConfirmButton: false,
+    timer: 3000,
+  }).then(() => {
+    window.location.reload();
+  });
+});
+async function profileData() {
+  try {
+    const access_token = JSON.parse(localStorage.getItem("client_token"));
+    const options = {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        "Content-Type": "application/json",
+      },
+    };
+    let response = await fetch(
+      "https://api.sarkhanrahimli.dev/api/filmalisa/profile",
+      options
+    );
+    if (response.ok) {
+      let resData = await response.json();
+      return resData.data;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
