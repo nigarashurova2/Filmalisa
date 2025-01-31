@@ -78,9 +78,17 @@ const getCategories = async ()=>{
     }
 }
 
+
+const rowsPerPage = 10;
+let currentPage = 1;
 const renderMovies = (movies, categories) => {
     const tbody = document.querySelector("#moviesTable tbody");
-    let html = movies.map((movie, index) => {
+
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    let data = movies.slice(start, end);
+    
+    let html = data.map((movie, index) => {
         const overview = movie.overview.length > 10 
             ? movie.overview.slice(0, 20).concat('...') 
             : movie.overview;
@@ -107,7 +115,35 @@ const renderMovies = (movies, categories) => {
     }).join("");
 
     tbody.innerHTML = html;
+    updatePagination(movies)
 };
+
+
+function updatePagination(data) {
+    const totalPages = Math.ceil(data.length / rowsPerPage);
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = "";
+    
+    const prevButton = document.createElement("button");
+    prevButton.innerText = "Previous";
+    prevButton.disabled = currentPage === 1;
+    prevButton.onclick = () => { currentPage--; showData(); };
+    paginationContainer.appendChild(prevButton);
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement("button");
+        pageButton.innerText = i;
+        pageButton.disabled = i === currentPage;
+        pageButton.onclick = () => { currentPage = i; showData(); };
+        paginationContainer.appendChild(pageButton);
+    }
+    
+    const nextButton = document.createElement("button");
+    nextButton.innerText = "Next";
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.onclick = () => { currentPage++; showData(); };
+    paginationContainer.appendChild(nextButton);
+}
 
 async function showData() {
     const tbody = document.querySelector("#moviesTable tbody")

@@ -26,9 +26,15 @@ const getCategories = async ()=>{
 
 
 
-const renderCategories = (data)=>{
+const rowsPerPage = 10;
+let currentPage = 1;
+const renderCategories = (categories)=>{
 
     const tbody = document.querySelector("#categoryTable tbody")
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    let data = categories.slice(start, end);
+
    let html =  data.map((category,index)=>{
     return `<tr>
                     <td>${category.id}</td>
@@ -40,8 +46,35 @@ const renderCategories = (data)=>{
             </tr>`
     }).join("")
     tbody.innerHTML = html
+
+    updatePagination(categories)
 }
 
+function updatePagination(data) {
+    const totalPages = Math.ceil(data.length / rowsPerPage);
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = "";
+    
+    const prevButton = document.createElement("button");
+    prevButton.innerText = "Previous";
+    prevButton.disabled = currentPage === 1;
+    prevButton.onclick = () => { currentPage--; showData(); };
+    paginationContainer.appendChild(prevButton);
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement("button");
+        pageButton.innerText = i;
+        pageButton.disabled = i === currentPage;
+        pageButton.onclick = () => { currentPage = i; showData(); };
+        paginationContainer.appendChild(pageButton);
+    }
+    
+    const nextButton = document.createElement("button");
+    nextButton.innerText = "Next";
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.onclick = () => { currentPage++; showData(); };
+    paginationContainer.appendChild(nextButton);
+}
 
 async function showData() {
     const tbody = document.querySelector("#categoryTable tbody")

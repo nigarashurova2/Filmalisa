@@ -24,9 +24,16 @@ const getComments = async ()=>{
     }
 }
 
+const rowsPerPage = 10;
+let currentPage = 1;
 const renderComments = (data)=>{
     const tbody = document.querySelector("#commentsTable tbody")
-   let html =  data.map((comment,index)=>{
+
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    let comments = data.slice(start, end);
+
+   let html =  comments.map((comment,index)=>{
     return `<tr>
                 <td>${comment.id}</td>
                 <td>${comment.comment}</td>
@@ -39,6 +46,33 @@ const renderComments = (data)=>{
             </tr>`
     }).join("")
     tbody.innerHTML = html
+    updatePagination(data)
+}
+
+function updatePagination(comments) {
+    const totalPages = Math.ceil(comments.length / rowsPerPage);
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = "";
+    
+    const prevButton = document.createElement("button");
+    prevButton.innerText = "Previous";
+    prevButton.disabled = currentPage === 1;
+    prevButton.onclick = () => { currentPage--; showData(); };
+    paginationContainer.appendChild(prevButton);
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement("button");
+        pageButton.innerText = i;
+        pageButton.disabled = i === currentPage;
+        pageButton.onclick = () => { currentPage = i; showData(); };
+        paginationContainer.appendChild(pageButton);
+    }
+    
+    const nextButton = document.createElement("button");
+    nextButton.innerText = "Next";
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.onclick = () => { currentPage++; showData(); };
+    paginationContainer.appendChild(nextButton);
 }
 
 
