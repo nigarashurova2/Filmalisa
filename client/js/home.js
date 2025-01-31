@@ -154,7 +154,7 @@ const renderMovies = async function () {
   
   if(movies && movies.length){
     let html = ``
-    for (let i = 0; i < 5; i++) {
+    for (let i = 7; i < 14; i++) {
       const movie = movies[i]
       let star = movie.imdb;
       if (movie.imdb > 5) star = 5;
