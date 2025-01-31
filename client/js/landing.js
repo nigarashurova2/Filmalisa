@@ -2,7 +2,7 @@ const contactForm = document.querySelector(".contact-form");
 const signInButton = document.querySelector(".sign-in-button");
 const userProfile = document.querySelector(".user-profile");
 const profileImage = userProfile.querySelector("img");
-const profileFullName = userProfile.querySelector("span");
+const profileFullName = userProfile.querySelector("a span");
 const logoutBtn = document.getElementById("logout");
 document.addEventListener("DOMContentLoaded", async function () {
   const faqItems = document.querySelectorAll(".faq-item");
@@ -35,6 +35,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     profileFullName.textContent = full_name;
   }
 });
+
+profileFullName.addEventListener("click", ()=>{
+  window.location.href = "/client/pages/home.html"
+
+})
 
 contactForm.addEventListener("submit", async function (e) {
   e.preventDefault();
