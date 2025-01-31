@@ -14,6 +14,20 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
+     <!-- Select2 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    
+     <style>
+         body{
+          overflow: hidden;
+         }
+         /* Select2 genişliyi tam olsun */
+         .select2-container {
+          max-width: 100%;
+         }
+     </style>
+
   </head>
   <body>
     <div class="dashboard">
@@ -164,13 +178,11 @@
                         
                         </select>
 
-                        <select name="countries" id="countries" multiple>
-                          <option value="1">Afghanistan</option>
-                          <option value="2">Australia</option>
-                          <option value="3">Germany</option>
-                          <option value="4">Canada</option>
-                          <option value="5">Russia</option>
+                        
+                        <select id="multiSelect" multiple="multiple" style="width: 100%">
+                         
                       </select>
+
                 
                        <div class="form-footer">
                         <div class="checkbox-container">
@@ -182,7 +194,7 @@
                        </div>
                       </div>
                       <div class="form-right">
-                        <img src="../assets/images/movie-img.jpeg" alt="Movie Poster">
+                        <img name="movie_image" src="../assets/images/noimage.png" alt="Movie Poster">
                       </div>
                     </form>
             </div>
@@ -202,19 +214,20 @@
                 
                         <textarea id="overview" name="overview" placeholder="Overview"></textarea>
                 
-                        <input type="text" id="cover-url" name="cover-url" placeholder="Cover URL">
+                        <input type="text" id="cover_url" name="cover_url" placeholder="Cover URL">
                 
                         <input type="text" id="fragman" name="fragman" placeholder="Fragman URL">
                 
-                        <input type="text" id="watch-url" name="watch-url" placeholder="Watch URL">
+                        <input type="text" id="watch_url" name="watch_url" placeholder="Watch URL">
                 
                         <input type="text" id="imdb" name="imdb" placeholder="IMDB">
                 
-                        <input type="number" id="runtime" name="runtime" placeholder="Run Time">
+                        <input type="number" id="run_time_min" name="run_time_min" placeholder="Run Time">
                 
-                        <select id="editCategory" name="editcategory" class="category">
+                        <select id="editCategory" name="category" class="category">
                          
                         </select>
+
                 
                        <div class="form-footer">
                         <div class="checkbox-container">
@@ -225,8 +238,8 @@
                           <button type="submit" class="submit-btn">Submit</button>
                        </div>
                       </div>
-                      <div class="form-right">
-                        <img width="300px" height="200px" src="../assets/images/movie-img.jpeg" alt="Movie Poster">                      
+                      <div class="form-right" style="width: 100%;">
+                        <img  name="movie_image"  src="" alt="Movie Poster">                      
                       </div>
                     </form>
             </div>
@@ -235,11 +248,21 @@
     </div>
     <!-- MODALS  -->
 
+     <!-- jQuery və Select2 JS -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+     
+     <script>
+         $(document).ready(function() {
+             $('#multiSelect').select2({
+                 placeholder: "Choose Actor",  
+                 allowClear: true          
+             });
+          
+         });
+     </script>
+
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/js/multi-select-tag.js"></script>
-  <script>
-    new MultiSelectTag('countries') 
-  </script> 
 
   <script src="../js/auth.js"></script>
   <script src="../js/main.js"></script>

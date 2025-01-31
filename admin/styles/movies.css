@@ -4,3 +4,15 @@
     background: #1A1A1A;
     position: relative;
   }
+  .select2-dropdown {
+    background-color: #171616 !important;
+    color: #788dc6;
+}
+
+
+.select2-container--default .select2-selection--multiple {
+  background-color: #171616 !important; 
+  border: 1px solid #788dc6 !important; 
+  color: #788dc6 !important;
+  padding: 10px !important;
+}

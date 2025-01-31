@@ -473,13 +473,14 @@ button {
 .form-left select {
   width: 100%;
   padding: 15px 20px;
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid #788dc6;
   color: #788dc6;
   font-size: 14px;
   background-color: transparent;
   gap: 16px;
 }
+
 
 .form-left textarea {
   min-height: 100px;
@@ -522,8 +523,7 @@ input:focus, textarea:focus{
 }
 
 .mainForm .form-right img {
-  width: 200px;
-  height: 300px;
+  width: 85%;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -588,23 +588,19 @@ input:focus, textarea:focus{
 
 
 
-/* Scroll barın genişliyini və rəngini dəyişmək */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-}
+} */
 
-/* Scroll barın arxa fon rəngi */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: #f1f1f1;
-}
+} */
 
-/* Scroll barın sürüşən hissəsi */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #2e2e2e;
 }
 
-/* Hover edildikdə scroll barın rəngi */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} */
