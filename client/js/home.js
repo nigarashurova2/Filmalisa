@@ -24,6 +24,28 @@ const getCategories = async function () {
     }
 }
 
+
+const getMovies = async function () {
+  try {
+    const access_token = JSON.parse(localStorage.getItem("client_token"))
+    const options = {
+        method:"GET",
+        headers: { 
+              "Authorization":`Bearer ${access_token}`,
+              "Content-Type":"application/json"
+        }
+    }
+    let response = await fetch('https://api.sarkhanrahimli.dev/api/filmalisa/movies', options)
+    if(response.ok){
+        let resData = await response.json();
+        return resData.data
+    }
+    
+} catch (error) {
+    console.log(error)
+}
+}
+
 const renderCategories = async function () {
     const categories = await getCategories()
     const sectionsContainer = document.querySelector(".main-content")
@@ -123,6 +145,69 @@ const renderCategories = async function () {
     }
 }
 
+
+
+
+const renderMovies = async function () {
+  const movies = await getMovies()
+  const slidersContent = document.querySelector(".home-carousel .swiper-wrapper")
+  
+  if(movies && movies.length){
+    let html = ``
+    for (let i = 0; i < 5; i++) {
+      const movie = movies[i]
+      let star = movie.imdb;
+      if (movie.imdb > 5) star = 5;
+      html += `
+      <div class="swiper-slide">
+                <div class="slide-content">
+                  <img src="${movie.cover_url}" alt="slide" />
+                  <div class="content">
+                    <div class="categoryName">${movie.category.name}</div>
+                    <div class="favorite-stars">
+                    ${'<span> <i class="bx bxs-star"></i> </span>'.repeat(star)}
+                    </div>
+                    <p class="title">${movie.title}</p>
+                    <p class="description">
+                      ${movie.overview}
+                    </p>
+                    <a href="${movie.watch_url}" target="_blank" class="watchBtn">Watch now</a>
+                  </div>
+            </div>
+      </div>
+      `
+    }
+    slidersContent.innerHTML = html
+    new Swiper('.home-carousel .swiper', {
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3200,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        1280: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        }
+      }
+    });
+  }
+    
+}
+
 function goFilmDetailPage(id) {
   window.location.href = "film-detail.html#"+id
 }
@@ -139,7 +224,13 @@ function watchMovieFragman(fragmanLink) {
   modalElement.classList.add("show")
 }
 
+
+
+
+
+
+
 async function showData() {
     renderCategories()
-   
+    renderMovies()
 }

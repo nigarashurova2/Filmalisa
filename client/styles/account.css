@@ -130,7 +130,7 @@ input:focus {
   border-radius: 50%;
   width: 270px;
   height: 270px;
-  /* background: linear-gradient(180deg, #72F435 0%, #027981 100%); */
+  background: linear-gradient(180deg, #72F435 0%, #027981 100%);
   padding: 4px;
 }
 
