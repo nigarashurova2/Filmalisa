@@ -103,7 +103,7 @@ const renderSimilarMovies = (data) => {
       </div>
     </div>`;
     }
-  );
+  ).join("");
 };
 
 const renderMovieComments = (comments) => {
