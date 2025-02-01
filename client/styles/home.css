@@ -63,7 +63,7 @@ section.main .header span{
    top: 0;
    left: 0;
   width: 100%;
-  height: 880px;
+  height: 800px;
   /* z-index: -1;  */
   overflow: hidden; 
 }
@@ -73,7 +73,7 @@ section.main .header span{
   display: flex;
   align-items: center;
   width: 100%;
-  height: 880px;
+  height: 850px;
 }
 .home-carousel .slide-content img{
   position: absolute;
